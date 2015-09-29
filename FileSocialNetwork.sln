@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{580EB569-5C17-4A81-A88E-E185487E6003}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSocialNetwork.Shared.Entities", "FileSocialNetwork.Shared.Entities\FileSocialNetwork.Shared.Entities.csproj", "{8422225E-5491-4B4E-934E-3028DBB665C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", "{EFE6631A-6407-4B9F-A2C8-2C8E302B9B30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSocialNetwork.DataAccess.SqlDataAccess", "FileSocialNetwork.DataAccess.SqlDataAccess\FileSocialNetwork.DataAccess.SqlDataAccess.csproj", "{9345C384-9EF4-4C87-9731-FE0A7CA3028D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSocialNetwork.DataAccess.SqlDataAccessTest", "FileSocialNetwork.DataAccess.SqlDataAccessTest\FileSocialNetwork.DataAccess.SqlDataAccessTest.csproj", "{5933177D-028F-48CE-926E-93B22D426190}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8422225E-5491-4B4E-934E-3028DBB665C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8422225E-5491-4B4E-934E-3028DBB665C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8422225E-5491-4B4E-934E-3028DBB665C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8422225E-5491-4B4E-934E-3028DBB665C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9345C384-9EF4-4C87-9731-FE0A7CA3028D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9345C384-9EF4-4C87-9731-FE0A7CA3028D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9345C384-9EF4-4C87-9731-FE0A7CA3028D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9345C384-9EF4-4C87-9731-FE0A7CA3028D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5933177D-028F-48CE-926E-93B22D426190}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5933177D-028F-48CE-926E-93B22D426190}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5933177D-028F-48CE-926E-93B22D426190}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5933177D-028F-48CE-926E-93B22D426190}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8422225E-5491-4B4E-934E-3028DBB665C5} = {580EB569-5C17-4A81-A88E-E185487E6003}
+		{9345C384-9EF4-4C87-9731-FE0A7CA3028D} = {EFE6631A-6407-4B9F-A2C8-2C8E302B9B30}
+		{5933177D-028F-48CE-926E-93B22D426190} = {EFE6631A-6407-4B9F-A2C8-2C8E302B9B30}
+	EndGlobalSection
+EndGlobal
