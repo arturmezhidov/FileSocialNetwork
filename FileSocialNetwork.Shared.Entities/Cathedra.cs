@@ -13,6 +13,14 @@ namespace FileSocialNetwork.Shared.Entities
 
 		public int FacultyId { get; set; }
 
-		public Faculty Faculty { get; set; }
+		public virtual Faculty Faculty { get; set; }
+		public virtual ICollection<Subject> Subjects { get; set; }
+		public virtual ICollection<Speciality> Specialities { get; set; }
+
+		public Cathedra()
+		{
+			Subjects = new HashSet<Subject>();
+			Specialities = new HashSet<Speciality>();
+		}
 	}
 }

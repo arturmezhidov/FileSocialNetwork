@@ -6,16 +6,19 @@ using System.Threading.Tasks;
 
 namespace FileSocialNetwork.Shared.Entities
 {
-	public class Faculty
+	public class Subject
 	{
 		public int Id { get; set; }
 		public string Title { get; set; }
 
-		public virtual ICollection<Cathedra> Cathedras { get; set; }
+		public int CathedraId { get; set; }
 
-		public Faculty()
+		public virtual Cathedra Cathedra { get; set; }
+		public virtual ICollection<File> Files { get; set; }
+
+		public Subject()
 		{
-			Cathedras = new HashSet<Cathedra>();
+			Files = new HashSet<File>();
 		}
 	}
 }
