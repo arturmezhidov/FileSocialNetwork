@@ -56,6 +56,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FileSocialNetwork.DataAccess.Contracts\FileSocialNetwork.DataAccess.Contracts.csproj">
+      <Project>{6f3dac80-4784-4a31-9a01-653eeff5fad6}</Project>
+      <Name>FileSocialNetwork.DataAccess.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FileSocialNetwork.DataAccess.SqlDataAccess\FileSocialNetwork.DataAccess.SqlDataAccess.csproj">
       <Project>{9345C384-9EF4-4C87-9731-FE0A7CA3028D}</Project>
       <Name>FileSocialNetwork.DataAccess.SqlDataAccess</Name>

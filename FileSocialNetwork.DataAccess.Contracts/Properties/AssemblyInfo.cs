@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Управление общими сведениями о сборке осуществляется с помощью 
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("FileSocialNetwork.Shared.Contracts")]
+[assembly: AssemblyTitle("FileSocialNetwork.DataAccess.Contracts")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("FileSocialNetwork.Shared.Contracts")]
+[assembly: AssemblyProduct("FileSocialNetwork.DataAccess.Contracts")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("7658ef76-1c84-44d6-acd5-c1b42225e00c")]
+[assembly: Guid("ed32c4f3-c31f-4366-aa82-8e749d4fe2a2")]
 
 // Сведения о версии сборки состоят из следующих четырех значений:
 //

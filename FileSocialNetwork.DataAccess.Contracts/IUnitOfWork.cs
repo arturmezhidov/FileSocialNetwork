@@ -2,7 +2,7 @@
 
 using FileSocialNetwork.Shared.Entities;
 
-namespace FileSocialNetwork.Shared.Contracts.DataAccess
+namespace FileSocialNetwork.DataAccess.Contracts
 {
 	public interface IUnitOfWork : IDisposable
 	{

@@ -1,8 +1,8 @@
 ﻿using System;
 
+using FileSocialNetwork.DataAccess.Contracts;
 using FileSocialNetwork.DataAccess.SqlDataAccess.DataContexts;
 using FileSocialNetwork.DataAccess.SqlDataAccess.Repositories;
-using FileSocialNetwork.Shared.Contracts.DataAccess;
 using FileSocialNetwork.Shared.Entities;
 
 namespace FileSocialNetwork.DataAccess.SqlDataAccess.UnitOfWorks
