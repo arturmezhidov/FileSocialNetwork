@@ -10,6 +10,7 @@ namespace FileSocialNetwork.Shared.Entities
 	{
 		public int Id { get; set; }
 		public string Title { get; set; }
+		public string OfficialUrl { get; set; }
 
 		public virtual ICollection<Cathedra> Cathedras { get; set; }
 

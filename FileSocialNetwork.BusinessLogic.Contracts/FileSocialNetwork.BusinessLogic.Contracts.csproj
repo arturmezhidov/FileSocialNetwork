@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8422225E-5491-4B4E-934E-3028DBB665C5}</ProjectGuid>
+    <ProjectGuid>{C95A9423-35E3-41AC-8DF0-DF8F77491808}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FileSocialNetwork.Shared.Entities</RootNamespace>
-    <AssemblyName>FileSocialNetwork.Shared.Entities</AssemblyName>
+    <RootNamespace>FileSocialNetwork.BusinessLogic.Contracts</RootNamespace>
+    <AssemblyName>FileSocialNetwork.BusinessLogic.Contracts</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,7 +31,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -40,18 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cathedra.cs" />
-    <Compile Include="Faculty.cs" />
-    <Compile Include="File.cs" />
-    <Compile Include="FileCategory.cs" />
-    <Compile Include="Group.cs" />
-    <Compile Include="Like.cs" />
-    <Compile Include="Message.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Speciality.cs" />
-    <Compile Include="Subject.cs" />
-    <Compile Include="User.cs" />
-    <Compile Include="UserMessage.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

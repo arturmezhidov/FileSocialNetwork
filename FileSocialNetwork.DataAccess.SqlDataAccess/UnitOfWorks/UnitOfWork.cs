@@ -15,9 +15,10 @@ namespace FileSocialNetwork.DataAccess.SqlDataAccess.UnitOfWorks
 		private IRepository<Speciality> specialities;
 		private IRepository<Subject> subjects;
 		private IRepository<Group> groups;
-		private IRepository<UserRole> userRoles;
+		private IRepository<FileCategory> fileCategories;
 		private IRepository<User> users;
 		private IRepository<File> files;
+		private IRepository<Like> likes;
 		private IRepository<Message> messages;
 		private IRepository<UserMessage> userMessages;
 		private bool disposed;
@@ -69,11 +70,11 @@ namespace FileSocialNetwork.DataAccess.SqlDataAccess.UnitOfWorks
 			}
 		}
 
-		public IRepository<UserRole> UserRoles
+		public IRepository<FileCategory> FileCategories
 		{
 			get
 			{
-				return userRoles ?? (userRoles = new BaseRepository<UserRole>(context));
+				return fileCategories ?? (fileCategories = new BaseRepository<FileCategory>(context));
 			}
 		}
 
@@ -90,6 +91,14 @@ namespace FileSocialNetwork.DataAccess.SqlDataAccess.UnitOfWorks
 			get
 			{
 				return files ?? (files = new BaseRepository<File>(context));
+			}
+		}
+
+		public IRepository<Like> Likes
+		{
+			get
+			{
+				return likes ?? (likes = new BaseRepository<Like>(context));
 			}
 		}
 
