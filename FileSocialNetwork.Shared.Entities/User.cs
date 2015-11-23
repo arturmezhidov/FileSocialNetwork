@@ -11,8 +11,6 @@ namespace FileSocialNetwork.Shared.Entities
 		public int Id { get; set; }
 		public string FirstName { get; set; }
 		public string LastName { get; set; }
-		public int? YearAmission { get; set; }
-		public int? YearGraduation { get; set; }
 
 		public int GroupId { get; set; }
 

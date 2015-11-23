@@ -10,6 +10,8 @@ namespace FileSocialNetwork.Shared.Entities
 	{
 		public int Id { get; set; }
 		public string Number { get; set; }
+		public int BeginYear { get; set; }
+		public int EndYear { get; set; }
 
 		public int SpecialityId { get; set; }
 

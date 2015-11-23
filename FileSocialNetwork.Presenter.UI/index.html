@@ -1,0 +1,799 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<link href="Content/bootstrap.css" rel="stylesheet" />
+	<link href="Content/main.css" rel="stylesheet" />
+	<script src="Scripts/jquery-1.9.1.js"></script>
+	<script src="Scripts/bootstrap.js"></script>
+</head>
+<body>
+
+<nav class="navbar  navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div id="navbar" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Начало</a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-education"></span> Факультеты</a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-briefcase"></span> Кафедры</a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-book"></span> Предметы</a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-duplicate"></span> Файлы</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-lock"></span> Вход</a></li>
+				<li><a data-toggle="modal" data-target="#register-modal"><span class="glyphicon glyphicon-user"></span> Регистрация</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<header>
+	<div class="container">
+		<div class="c-search">
+			<input type="text" placeholder="Поиск"/>
+			<span class="glyphicon glyphicon-search"></span>
+		</div>
+		<div class="logo">
+			<img src="Images/logo.png"/>
+			<h1>БНТУ Хелпер</h1>
+		</div>
+		<a href="http://www.bntu.by/" class="oficial" target="_blank">Белорусский национальный технический университет</a>
+		<div class="c-statistic row">
+			<div class="col-md-4">
+				<div class="statistic">
+					<h1>47</h1>
+					<p><span class="glyphicon glyphicon-book"></span> предметов
+					</p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="statistic">
+					<h1>123</h1>
+					<p><span class="glyphicon glyphicon-duplicate"></span> файлов
+					</p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="statistic">
+					<h1>95</h1>
+					<p><span class="glyphicon glyphicon-user"></span> пользователей
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<article>
+
+<section class="s-faculty">
+	<div class="container">
+		<h1 class="h-faculty"><span><span class="glyphicon glyphicon-education"></span> Факультеты </span></h1>
+		<div class="c-facultiy-list">
+			<ul class="facultiy-list">
+				<li>
+					<p>Автотракторный (АТФ)</p>
+				</li>
+				<li>
+					<p>Горного дела и инженерной экологии (ФГДЭ)</p>
+				</li>
+				<li>
+					<p>Машиностроительный (МСФ)</p>
+				</li>
+				<li>
+					<p>Механико-технологический (МТФ)</p>
+				</li>
+				<li>
+					<p>Маркетинга, менеджмента, предпринимательства (ФММП)</p>
+				</li>
+				<li>
+					<p>Энергетический (ЭФ)</p>
+				</li>
+				<li>
+					<p>Информационных технологий и робототехники (ФИТР)</p>
+				</li>
+				<li>
+					<p>Технологий управления и гуманитаризации (ФТУГ)</p>
+				</li>
+				<li>
+					<p>Филиал Солигорск</p>
+				</li>
+				<li>
+					<p>Инженерно-педагогический (ИПФ)</p>
+				</li>
+				<li>
+					<p>Энергетического строительства (ФЭС)</p>
+				</li>
+				<li>
+					<p>Архитектурный (АФ)</p>
+				</li>
+				<li>
+					<p>Строительный (СФ)</p>
+				</li>
+				<li>
+					<p>Приборостроительный (ПСФ)</p>
+				</li>
+				<li>
+					<p>Транспортных коммуникаций (ФТК)</p>
+				</li>
+				<li>
+					<p>Военно-технический (ВТФ)</p>
+				</li>
+				<li>
+					<p>Международного сотрудничества (ФМС)</p>
+				</li>
+				<li>
+					<p>Спортивно-технический (СТФ)</p>
+				</li>
+				<li>
+					<p>Международный институт дистанционного образования (МИДО)</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</section>
+
+<section class="s-department">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h1 class="h-department">
+					<span class="glyphicon glyphicon-briefcase"></span> Кафедры
+				</h1>
+			</div>
+			<div class="col-md-6">
+				<select class="faculty-select-list">
+					<option>Информационных технологий и робототехники (ФИТР)</option>
+				</select>
+			</div>
+		</div>
+
+		<ul class="department-list">
+			<li>
+				<p class="h-speciality">Программное обеспечение вычислительной техники и автоматизированных систем</p>
+				<ul class="speciality-list">
+					<li>1-40 01 01 Программное обеспечение информационных технологий</li>
+					<li>1-40 05 01-04 Информационные системы и технолгии в обработке и представлении информации</li>
+				</ul>
+			</li>
+			<li>
+				<p class="h-speciality">Системы автоматизированного проектирования</p>
+				<ul class="speciality-list">
+					<li>1-40 05 01-01 Информационные системы и технологии в проектировании и производстве</li>
+				</ul>
+			</li>
+			<li>
+				<p class="h-speciality">Робототехнические системы</p>
+				<ul class="speciality-list">
+					<li>1-53 01 01 Автоматизация технологических процессов и производств</li>
+					<li>1-53 01 02 Автоматизированные системы обработки информации</li>
+					<li>1-53 01 06 Промышленные роботы и робототехнические комплексы</li>
+				</ul>
+			</li>
+			<li>
+				<p class="h-speciality">Электропривод и автоматизация промышленных установок и технологических комплексов</p>
+				<ul class="speciality-list">
+					<li>1-53 01 05 Автоматизированные электроприводы</li>
+				</ul>
+			</li>
+		</ul>
+
+	</div>
+</section>
+
+<section class="s-subject">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h1 class="h-subject">
+					<span class="glyphicon glyphicon-book"></span> Предметы
+				</h1>
+			</div>
+			<div class="col-md-6">
+				<select class="department-select-list">
+					<option>1-40 05 01-04 Информационные системы и технолгии в обработке и представлении информации</option>
+				</select>
+			</div>
+		</div>
+		<div class="subjects">
+			<div class="list-group">
+				<p class="list-group-item active">
+					<span class="glyphicon glyphicon-folder-open"></span><span class="h-subject-item">Объектно-ориентированное программирование</span><span class="badge">67</span>
+				</p>
+				<p class="list-group-item">
+					<span class="glyphicon glyphicon-file"></span> Лабораторные работы <span class="badge">24</span>
+				</p>
+				<p class="list-group-item">
+					<span class="glyphicon glyphicon-file"></span> Шпоргалки <span class="badge">43</span>
+				</p>
+			</div>
+			<div class="list-group">
+				<p class="list-group-item active">
+					<span class="glyphicon glyphicon-folder-open"></span><span class="h-subject-item">Физика</span><span class="badge">45</span>
+				</p>
+				<p class="list-group-item">
+					<span class="glyphicon glyphicon-file"></span> Лабораторные работы <span class="badge">24</span>
+				</p>
+				<p class="list-group-item">
+					<span class="glyphicon glyphicon-file"></span> Методички <span class="badge">112</span>
+				</p>
+				<p class="list-group-item">
+					<span class="glyphicon glyphicon-file"></span> Шпоргалки <span class="badge">15</span>
+				</p>
+			</div>
+			<div class="list-group">
+				<p class="list-group-item active">
+					<span class="glyphicon glyphicon-folder-open"></span><span class="h-subject-item">Физика</span><span class="badge">45</span>
+				</p>
+				<p class="list-group-item">
+					<span class="glyphicon glyphicon-file"></span> Лабораторные работы <span class="badge">24</span>
+				</p>
+				<p class="list-group-item">
+					<span class="glyphicon glyphicon-file"></span> Методички <span class="badge">112</span>
+				</p>
+				<p class="list-group-item">
+					<span class="glyphicon glyphicon-file"></span> Шпоргалки <span class="badge">15</span>
+				</p>
+			</div>
+		</div>
+
+	</div>
+</section>
+
+<section class="s-file">
+<div class="container">
+<div class="row">
+	<div class="col-md-3">
+		<h1 class="h-file">
+			<span class="glyphicon glyphicon-duplicate"></span> Файлы
+		</h1>
+	</div>
+	<div class="col-md-3">
+		<a class="file-add"><span class="glyphicon glyphicon-open-file"></span> Добавить</a>
+	</div>
+	<div class="col-md-6">
+		<select class="file-select-list">
+			<option>Объектно-ориентированное программирование</option>
+		</select>
+	</div>
+</div>
+<div class="c-file-category">
+<div class="file-category">
+	<a class="category-name" data-toggle="collapse" href="#lab" aria-expanded="false">
+		Лабораторные работы
+		<span id="lab-up" class="glyphicon glyphicon-chevron-up"></span>
+		<span id="lab-down" class="glyphicon glyphicon-chevron-down collapse"></span>
+	</a>
+	<div id="lab" class="collapse in">
+		<div class="file">
+			<div class="file-header">
+				<div class="file-index">#22</div>
+				<div class="file-avthor"><span class="glyphicon glyphicon-user"></span><span> Noname</span></div>
+			</div>
+			<h3 class="file-name">Объектно-ориентированное программирование программирование программирование</h3>
+			<p class="file-like"><span class="glyphicon glyphicon-thumbs-up"></span> <span>32</span></p>
+			<div class="file-cource">
+				<div>Курс <span>2</span></div>
+				<div>Семестр <span>1</span></div>
+			</div>
+			<div class="file-footer">
+				<div class="file-data"><span class="glyphicon glyphicon-calendar"></span> <span>21.11.2014</span></div>
+				<div class="file-download">
+					<span class="glyphicon glyphicon-save-file"></span>Скачать
+				</div>
+			</div>
+		</div>
+		<div class="file">
+			<div class="file-header">
+				<div class="file-index">#22</div>
+				<div class="file-avthor"><span class="glyphicon glyphicon-user"></span><span> Noname</span></div>
+			</div>
+			<h3 class="file-name">Объектно-ориентированное программирование</h3>
+			<p class="file-like"><span class="glyphicon glyphicon-thumbs-up"></span> <span>32</span></p>
+			<div class="file-cource">
+				<div>Курс <span>2</span></div>
+				<div>Семестр <span>1</span></div>
+			</div>
+			<div class="file-footer">
+				<div class="file-data"><span class="glyphicon glyphicon-calendar"></span> <span>21.11.2014</span></div>
+				<div class="file-download">
+					<span class="glyphicon glyphicon-save-file"></span>Скачать
+				</div>
+			</div>
+		</div>
+		<div class="file">
+			<div class="file-header">
+				<div class="file-index">#22</div>
+				<div class="file-avthor"><span class="glyphicon glyphicon-user"></span><span> Noname</span></div>
+			</div>
+			<h3 class="file-name">Объектно-ориентированное программирование</h3>
+			<p class="file-like"><span class="glyphicon glyphicon-thumbs-up"></span> <span>32</span></p>
+			<div class="file-cource">
+				<div>Курс <span>2</span></div>
+				<div>Семестр <span>1</span></div>
+			</div>
+			<div class="file-footer">
+				<div class="file-data"><span class="glyphicon glyphicon-calendar"></span> <span>21.11.2014</span></div>
+				<div class="file-download">
+					<span class="glyphicon glyphicon-save-file"></span>Скачать
+				</div>
+			</div>
+		</div>
+		<div class="file">
+			<div class="file-header">
+				<div class="file-index">#22</div>
+				<div class="file-avthor"><span class="glyphicon glyphicon-user"></span><span> Noname</span></div>
+			</div>
+			<h3 class="file-name">Объектно-ориентированное программирование</h3>
+			<p class="file-like"><span class="glyphicon glyphicon-thumbs-up"></span> <span>32</span></p>
+			<div class="file-cource">
+				<div>Курс <span>2</span></div>
+				<div>Семестр <span>1</span></div>
+			</div>
+			<div class="file-footer">
+				<div class="file-data"><span class="glyphicon glyphicon-calendar"></span> <span>21.11.2014</span></div>
+				<div class="file-download">
+					<span class="glyphicon glyphicon-save-file"></span>Скачать
+				</div>
+			</div>
+		</div>
+		<div class="file">
+			<div class="file-header">
+				<div class="file-index">#22</div>
+				<div class="file-avthor"><span class="glyphicon glyphicon-user"></span><span> Noname</span></div>
+			</div>
+			<h3 class="file-name">Объектно-ориентированное программирование</h3>
+			<p class="file-like"><span class="glyphicon glyphicon-thumbs-up"></span> <span>32</span></p>
+			<div class="file-cource">
+				<div>Курс <span>2</span></div>
+				<div>Семестр <span>1</span></div>
+			</div>
+			<div class="file-footer">
+				<div class="file-data"><span class="glyphicon glyphicon-calendar"></span> <span>21.11.2014</span></div>
+				<div class="file-download">
+					<span class="glyphicon glyphicon-save-file"></span>Скачать
+				</div>
+			</div>
+		</div>
+		<div class="file">
+			<div class="file-header">
+				<div class="file-index">#22</div>
+				<div class="file-avthor"><span class="glyphicon glyphicon-user"></span><span> Noname</span></div>
+			</div>
+			<h3 class="file-name">Объектно-ориентированное программирование</h3>
+			<p class="file-like"><span class="glyphicon glyphicon-thumbs-up"></span> <span>32</span></p>
+			<div class="file-cource">
+				<div>Курс <span>2</span></div>
+				<div>Семестр <span>1</span></div>
+			</div>
+			<div class="file-footer">
+				<div class="file-data"><span class="glyphicon glyphicon-calendar"></span> <span>21.11.2014</span></div>
+				<div class="file-download">
+					<span class="glyphicon glyphicon-save-file"></span>Скачать
+				</div>
+			</div>
+		</div>
+		<div class="file">
+			<div class="file-header">
+				<div class="file-index">#22</div>
+				<div class="file-avthor"><span class="glyphicon glyphicon-user"></span><span> Noname</span></div>
+			</div>
+			<h3 class="file-name">Объектно-ориентированное программирование</h3>
+			<p class="file-like"><span class="glyphicon glyphicon-thumbs-up"></span> <span>32</span></p>
+			<div class="file-cource">
+				<div>Курс <span>2</span></div>
+				<div>Семестр <span>1</span></div>
+			</div>
+			<div class="file-footer">
+				<div class="file-data"><span class="glyphicon glyphicon-calendar"></span> <span>21.11.2014</span></div>
+				<div class="file-download">
+					<span class="glyphicon glyphicon-save-file"></span>Скачать
+				</div>
+			</div>
+		</div>
+		<div class="file">
+			<div class="file-header">
+				<div class="file-index">#22</div>
+				<div class="file-avthor"><span class="glyphicon glyphicon-user"></span><span> Noname</span></div>
+			</div>
+			<h3 class="file-name">Объектно-ориентированное программирование</h3>
+			<p class="file-like"><span class="glyphicon glyphicon-thumbs-up"></span> <span>32</span></p>
+			<div class="file-cource">
+				<div>Курс <span>2</span></div>
+				<div>Семестр <span>1</span></div>
+			</div>
+			<div class="file-footer">
+				<div class="file-data"><span class="glyphicon glyphicon-calendar"></span> <span>21.11.2014</span></div>
+				<div class="file-download">
+					<span class="glyphicon glyphicon-save-file"></span>Скачать
+				</div>
+			</div>
+		</div>
+		<div class="file">
+			<div class="file-header">
+				<div class="file-index">#22</div>
+				<div class="file-avthor"><span class="glyphicon glyphicon-user"></span><span> Noname</span></div>
+			</div>
+			<h3 class="file-name">Объектно-ориентированное программирование</h3>
+			<p class="file-like"><span class="glyphicon glyphicon-thumbs-up"></span> <span>32</span></p>
+			<div class="file-cource">
+				<div>Курс <span>2</span></div>
+				<div>Семестр <span>1</span></div>
+			</div>
+			<div class="file-footer">
+				<div class="file-data"><span class="glyphicon glyphicon-calendar"></span> <span>21.11.2014</span></div>
+				<div class="file-download">
+					<span class="glyphicon glyphicon-save-file"></span>Скачать
+				</div>
+			</div>
+		</div>
+		<div class="file">
+			<div class="file-header">
+				<div class="file-index">#22</div>
+				<div class="file-avthor"><span class="glyphicon glyphicon-user"></span><span> Noname</span></div>
+			</div>
+			<h3 class="file-name">Объектно-ориентированное программирование</h3>
+			<p class="file-like"><span class="glyphicon glyphicon-thumbs-up"></span> <span>32</span></p>
+			<div class="file-cource">
+				<div>Курс <span>2</span></div>
+				<div>Семестр <span>1</span></div>
+			</div>
+			<div class="file-footer">
+				<div class="file-data"><span class="glyphicon glyphicon-calendar"></span> <span>21.11.2014</span></div>
+				<div class="file-download">
+					<span class="glyphicon glyphicon-save-file"></span>Скачать
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="file-category">
+	<a class="category-name" data-toggle="collapse" href="#shpor" aria-expanded="false">
+		Шпоргалки
+		<span id="shpor-up" class="glyphicon glyphicon-chevron-up"></span>
+		<span id="shpor-down" class="glyphicon glyphicon-chevron-down collapse"></span>
+	</a>
+	<div id="shpor" class="collapse in">
+		<div class="file">
+			<div class="file-header">
+				<div class="file-index">#22</div>
+				<div class="file-avthor"><span class="glyphicon glyphicon-user"></span><span> Noname</span></div>
+			</div>
+			<h3 class="file-name">Объектно-ориентированное программирование программирование программирование</h3>
+			<p class="file-like"><span class="glyphicon glyphicon-thumbs-up"></span> <span>32</span></p>
+			<div class="file-cource">
+				<div>Курс <span>2</span></div>
+				<div>Семестр <span>1</span></div>
+			</div>
+			<div class="file-footer">
+				<div class="file-data"><span class="glyphicon glyphicon-calendar"></span> <span>21.11.2014</span></div>
+				<div class="file-download">
+					<span class="glyphicon glyphicon-save-file"></span>Скачать
+				</div>
+			</div>
+		</div>
+		<div class="file">
+			<div class="file-header">
+				<div class="file-index">#22</div>
+				<div class="file-avthor"><span class="glyphicon glyphicon-user"></span><span> Noname</span></div>
+			</div>
+			<h3 class="file-name">Объектно-ориентированное программирование</h3>
+			<p class="file-like"><span class="glyphicon glyphicon-thumbs-up"></span> <span>32</span></p>
+			<div class="file-cource">
+				<div>Курс <span>2</span></div>
+				<div>Семестр <span>1</span></div>
+			</div>
+			<div class="file-footer">
+				<div class="file-data"><span class="glyphicon glyphicon-calendar"></span> <span>21.11.2014</span></div>
+				<div class="file-download">
+					<span class="glyphicon glyphicon-save-file"></span>Скачать
+				</div>
+			</div>
+		</div>
+		<div class="file">
+			<div class="file-header">
+				<div class="file-index">#22</div>
+				<div class="file-avthor"><span class="glyphicon glyphicon-user"></span><span> Noname</span></div>
+			</div>
+			<h3 class="file-name">Объектно-ориентированное программирование</h3>
+			<p class="file-like"><span class="glyphicon glyphicon-thumbs-up"></span> <span>32</span></p>
+			<div class="file-cource">
+				<div>Курс <span>2</span></div>
+				<div>Семестр <span>1</span></div>
+			</div>
+			<div class="file-footer">
+				<div class="file-data"><span class="glyphicon glyphicon-calendar"></span> <span>21.11.2014</span></div>
+				<div class="file-download">
+					<span class="glyphicon glyphicon-save-file"></span>Скачать
+				</div>
+			</div>
+		</div>
+		<div class="file">
+			<div class="file-header">
+				<div class="file-index">#22</div>
+				<div class="file-avthor"><span class="glyphicon glyphicon-user"></span><span> Noname</span></div>
+			</div>
+			<h3 class="file-name">Объектно-ориентированное программирование</h3>
+			<p class="file-like"><span class="glyphicon glyphicon-thumbs-up"></span> <span>32</span></p>
+			<div class="file-cource">
+				<div>Курс <span>2</span></div>
+				<div>Семестр <span>1</span></div>
+			</div>
+			<div class="file-footer">
+				<div class="file-data"><span class="glyphicon glyphicon-calendar"></span> <span>21.11.2014</span></div>
+				<div class="file-download">
+					<span class="glyphicon glyphicon-save-file"></span>Скачать
+				</div>
+			</div>
+		</div>
+		<div class="file">
+			<div class="file-header">
+				<div class="file-index">#22</div>
+				<div class="file-avthor"><span class="glyphicon glyphicon-user"></span><span> Noname</span></div>
+			</div>
+			<h3 class="file-name">Объектно-ориентированное программирование</h3>
+			<p class="file-like"><span class="glyphicon glyphicon-thumbs-up"></span> <span>32</span></p>
+			<div class="file-cource">
+				<div>Курс <span>2</span></div>
+				<div>Семестр <span>1</span></div>
+			</div>
+			<div class="file-footer">
+				<div class="file-data"><span class="glyphicon glyphicon-calendar"></span> <span>21.11.2014</span></div>
+				<div class="file-download">
+					<span class="glyphicon glyphicon-save-file"></span>Скачать
+				</div>
+			</div>
+		</div>
+		<div class="file">
+			<div class="file-header">
+				<div class="file-index">#22</div>
+				<div class="file-avthor"><span class="glyphicon glyphicon-user"></span><span> Noname</span></div>
+			</div>
+			<h3 class="file-name">Объектно-ориентированное программирование</h3>
+			<p class="file-like"><span class="glyphicon glyphicon-thumbs-up"></span> <span>32</span></p>
+			<div class="file-cource">
+				<div>Курс <span>2</span></div>
+				<div>Семестр <span>1</span></div>
+			</div>
+			<div class="file-footer">
+				<div class="file-data"><span class="glyphicon glyphicon-calendar"></span> <span>21.11.2014</span></div>
+				<div class="file-download">
+					<span class="glyphicon glyphicon-save-file"></span>Скачать
+				</div>
+			</div>
+		</div>
+		<div class="file">
+			<div class="file-header">
+				<div class="file-index">#22</div>
+				<div class="file-avthor"><span class="glyphicon glyphicon-user"></span><span> Noname</span></div>
+			</div>
+			<h3 class="file-name">Объектно-ориентированное программирование</h3>
+			<p class="file-like"><span class="glyphicon glyphicon-thumbs-up"></span> <span>32</span></p>
+			<div class="file-cource">
+				<div>Курс <span>2</span></div>
+				<div>Семестр <span>1</span></div>
+			</div>
+			<div class="file-footer">
+				<div class="file-data"><span class="glyphicon glyphicon-calendar"></span> <span>21.11.2014</span></div>
+				<div class="file-download">
+					<span class="glyphicon glyphicon-save-file"></span>Скачать
+				</div>
+			</div>
+		</div>
+		<div class="file">
+			<div class="file-header">
+				<div class="file-index">#22</div>
+				<div class="file-avthor"><span class="glyphicon glyphicon-user"></span><span> Noname</span></div>
+			</div>
+			<h3 class="file-name">Объектно-ориентированное программирование</h3>
+			<p class="file-like"><span class="glyphicon glyphicon-thumbs-up"></span> <span>32</span></p>
+			<div class="file-cource">
+				<div>Курс <span>2</span></div>
+				<div>Семестр <span>1</span></div>
+			</div>
+			<div class="file-footer">
+				<div class="file-data"><span class="glyphicon glyphicon-calendar"></span> <span>21.11.2014</span></div>
+				<div class="file-download">
+					<span class="glyphicon glyphicon-save-file"></span>Скачать
+				</div>
+			</div>
+		</div>
+		<div class="file">
+			<div class="file-header">
+				<div class="file-index">#22</div>
+				<div class="file-avthor"><span class="glyphicon glyphicon-user"></span><span> Noname</span></div>
+			</div>
+			<h3 class="file-name">Объектно-ориентированное программирование</h3>
+			<p class="file-like"><span class="glyphicon glyphicon-thumbs-up"></span> <span>32</span></p>
+			<div class="file-cource">
+				<div>Курс <span>2</span></div>
+				<div>Семестр <span>1</span></div>
+			</div>
+			<div class="file-footer">
+				<div class="file-data"><span class="glyphicon glyphicon-calendar"></span> <span>21.11.2014</span></div>
+				<div class="file-download">
+					<span class="glyphicon glyphicon-save-file"></span>Скачать
+				</div>
+			</div>
+		</div>
+		<div class="file">
+			<div class="file-header">
+				<div class="file-index">#22</div>
+				<div class="file-avthor"><span class="glyphicon glyphicon-user"></span><span> Noname</span></div>
+			</div>
+			<h3 class="file-name">Объектно-ориентированное программирование</h3>
+			<p class="file-like"><span class="glyphicon glyphicon-thumbs-up"></span> <span>32</span></p>
+			<div class="file-cource">
+				<div>Курс <span>2</span></div>
+				<div>Семестр <span>1</span></div>
+			</div>
+			<div class="file-footer">
+				<div class="file-data"><span class="glyphicon glyphicon-calendar"></span> <span>21.11.2014</span></div>
+				<div class="file-download">
+					<span class="glyphicon glyphicon-save-file"></span>Скачать
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+</section>
+
+</article>
+
+<footer>
+	<div class="logo">
+		<img src="Images/logo.png"/>
+		<h1>БНТУ Хелпер</h1>
+	</div>
+	<p class="copyright">© Copyright 2015. Белорусский национальный технический университет.</p>
+</footer>
+
+<script type="text/javascript">
+	$(function() {
+		$('#lab').on('show.bs.collapse', function() {
+			$('#lab-up').show();
+			$('#lab-down').hide();
+		});
+		$('#lab').on('hide.bs.collapse', function() {
+			$('#lab-up').hide();
+			$('#lab-down').show();
+		});
+
+		$('#shpor').on('show.bs.collapse', function() {
+			$('#shpor-up').show();
+			$('#shpor-down').hide();
+		});
+		$('#shpor').on('hide.bs.collapse', function() {
+			$('#shpor-up').hide();
+			$('#shpor-down').show();
+		});
+	});
+</script>
+
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modal-head" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="login-modal-head"><span class="glyphicon glyphicon-lock"></span> Вход </h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label for="login-username" class="col-sm-2 control-label">Логин</label>
+						<div class="col-sm-10">
+							<input class="form-control" id="login-username" placeholder="Логин">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="login-password" class="col-sm-2 control-label">Пароль</label>
+						<div class="col-sm-10">
+							<input type="password" class="form-control" id="login-password" placeholder="Пароль">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<div class="checkbox">
+								<label>
+									<input type="checkbox"> Запомнить меня
+								</label>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary"> Войти </button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="register-modal-head" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="register-modal-head"><span class="glyphicon glyphicon-user"></span> Регистрация </h4>
+				</div>
+				<div class="modal-body">
+					<form class="form-horizontal" role="form">
+						<div class="form-group">
+							<label for="register-firstname" class="col-sm-4 control-label">Имя</label>
+							<div class="col-sm-8">
+								<input class="form-control" id="register-firstname" placeholder="Имя">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="register-lastname" class="col-sm-4 control-label">Фамилия</label>
+							<div class="col-sm-8">
+								<input class="form-control" id="register-lastname" placeholder="Фамилия">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="register-username" class="col-sm-4 control-label">Логин</label>
+							<div class="col-sm-8">
+								<input class="form-control" id="register-username" placeholder="Логин">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="register-password" class="col-sm-4 control-label">Пароль</label>
+							<div class="col-sm-8">
+								<input type="password" class="form-control" id="register-password" placeholder="Пароль">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="register-password2" class="col-sm-4 control-label">Повтор пароля</label>
+							<div class="col-sm-8">
+								<input type="password" class="form-control" id="register-password2" placeholder="Повтор пароля">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="register-email" class="col-sm-4 control-label">Почта</label>
+							<div class="col-sm-8">
+								<input type="email" class="form-control" id="register-email" placeholder="Почта">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="register-phone" class="col-sm-4 control-label">Телефон</label>
+							<div class="col-sm-8">
+								<input class="form-control" id="register-phone" placeholder="Телефон">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="register-group" class="col-sm-4 control-label">Группа</label>
+							<div class="col-sm-5">
+								<select class="form-control" id="register-group">
+									<option>107221</option>
+									<option>107221</option>
+									<option>107221</option>
+									<option>107221</option>
+								</select>
+							</div>
+							<button class="btn  btn-primary col-sm-2">Создать</button>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary"> Зарегистрировать </button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
