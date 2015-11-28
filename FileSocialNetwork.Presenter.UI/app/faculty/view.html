@@ -1,0 +1,17 @@
+﻿<div ng-controller="facultyController" class="container">
+
+	<h1 class="h-faculty">
+		<span><span class="glyphicon glyphicon-education"></span> Факультеты </span>
+	</h1>
+
+	<div class="c-facultiy-list">
+
+		<ul class="facultiy-list">
+			<li ng-repeat="faculty in faculties">
+				<p>{{faculty.Title}}</p>
+			</li>
+		</ul>
+
+	</div>
+
+</div>

@@ -1,13 +1,26 @@
 ﻿<!DOCTYPE html>
-<html ng-app="app">
+<html ng-app="app" id="ng-app" xmlns:ng="http://angularjs.org">
 <head>
 	<meta charset="utf-8" />
-	<title></title>
+	<title>File Social Network</title>
+
 	<link href="Content/bootstrap.css" rel="stylesheet" />
 	<link href="Content/main.css" rel="stylesheet" />
-	<script src="Scripts/jquery-1.9.1.js"></script>
-	<script src="Scripts/bootstrap.js"></script>
-	<script src="Scripts/angular.js"></script>
+
+	<script src="scripts/jquery-1.9.1.js"></script>
+	<script src="scripts/bootstrap.js"></script>
+	<script src="scripts/angular.js"></script>
+	<script src="scripts/angular-route.js"></script>
+
+	<script src="app/app.js"></script>
+	<script src="app/routing.js"></script>
+
+	<script src="app/home/controller.js"></script>
+	<script src="app/home/api-service.js"></script>
+
+	<script src="app/faculty/controller.js"></script>
+	<script src="app/faculty/http-service.js"></script>
+
 </head>
 <body>
 
@@ -37,287 +50,7 @@
 		</div>
 	</nav>
 
-	<header>
-		<div class="container">
-			<div class="c-search">
-				<input type="text" placeholder="Поиск" />
-				<span class="glyphicon glyphicon-search"></span>
-			</div>
-			<div class="logo">
-				<img src="Images/logo.png" />
-				<h1>БНТУ Хелпер</h1>
-			</div>
-			<a href="http://www.bntu.by/" class="oficial" target="_blank">Белорусский национальный технический университет</a>
-			<div class="c-statistic row">
-				<div class="col-md-4">
-					<div class="statistic">
-						<h1>47</h1>
-						<p>
-							<span class="glyphicon glyphicon-book"></span> предметов
-						</p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="statistic">
-						<h1>123</h1>
-						<p>
-							<span class="glyphicon glyphicon-duplicate"></span> файлов
-						</p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="statistic">
-						<h1>95</h1>
-						<p>
-							<span class="glyphicon glyphicon-user"></span> пользователей
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
-
-	<article>
-
-		<section class="s-faculty">
-			<div class="container">
-				<h1 class="h-faculty"><span><span class="glyphicon glyphicon-education"></span> Факультеты </span></h1>
-				<div class="c-facultiy-list">
-					<ul class="facultiy-list">
-						<li>
-							<p>Автотракторный (АТФ)</p>
-						</li>
-						<li>
-							<p>Горного дела и инженерной экологии (ФГДЭ)</p>
-						</li>
-						<li>
-							<p>Машиностроительный (МСФ)</p>
-						</li>
-						<li>
-							<p>Механико-технологический (МТФ)</p>
-						</li>
-						<li>
-							<p>Маркетинга, менеджмента, предпринимательства (ФММП)</p>
-						</li>
-						<li>
-							<p>Энергетический (ЭФ)</p>
-						</li>
-						<li>
-							<p>Информационных технологий и робототехники (ФИТР)</p>
-						</li>
-						<li>
-							<p>Технологий управления и гуманитаризации (ФТУГ)</p>
-						</li>
-						<li>
-							<p>Филиал Солигорск</p>
-						</li>
-						<li>
-							<p>Инженерно-педагогический (ИПФ)</p>
-						</li>
-						<li>
-							<p>Энергетического строительства (ФЭС)</p>
-						</li>
-						<li>
-							<p>Архитектурный (АФ)</p>
-						</li>
-						<li>
-							<p>Строительный (СФ)</p>
-						</li>
-						<li>
-							<p>Приборостроительный (ПСФ)</p>
-						</li>
-						<li>
-							<p>Транспортных коммуникаций (ФТК)</p>
-						</li>
-						<li>
-							<p>Военно-технический (ВТФ)</p>
-						</li>
-						<li>
-							<p>Международного сотрудничества (ФМС)</p>
-						</li>
-						<li>
-							<p>Спортивно-технический (СТФ)</p>
-						</li>
-						<li>
-							<p>Международный институт дистанционного образования (МИДО)</p>
-						</li>
-					</ul>
-				</div>
-			</div>
-
-		</section>
-
-		<section class="s-department">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<h1 class="h-department">
-							<span class="glyphicon glyphicon-briefcase"></span> Кафедры
-						</h1>
-					</div>
-					<div class="col-md-6">
-						<select class="faculty-select-list">
-							<option>Информационных технологий и робототехники (ФИТР)</option>
-						</select>
-					</div>
-				</div>
-
-				<ul class="department-list">
-					<li>
-						<p class="h-speciality">Программное обеспечение вычислительной техники и автоматизированных систем</p>
-						<ul class="speciality-list">
-							<li>1-40 01 01 Программное обеспечение информационных технологий</li>
-							<li>1-40 05 01-04 Информационные системы и технолгии в обработке и представлении информации</li>
-						</ul>
-					</li>
-					<li>
-						<p class="h-speciality">Системы автоматизированного проектирования</p>
-						<ul class="speciality-list">
-							<li>1-40 05 01-01 Информационные системы и технологии в проектировании и производстве</li>
-						</ul>
-					</li>
-					<li>
-						<p class="h-speciality">Робототехнические системы</p>
-						<ul class="speciality-list">
-							<li>1-53 01 01 Автоматизация технологических процессов и производств</li>
-							<li>1-53 01 02 Автоматизированные системы обработки информации</li>
-							<li>1-53 01 06 Промышленные роботы и робототехнические комплексы</li>
-						</ul>
-					</li>
-					<li>
-						<p class="h-speciality">Электропривод и автоматизация промышленных установок и технологических комплексов</p>
-						<ul class="speciality-list">
-							<li>1-53 01 05 Автоматизированные электроприводы</li>
-						</ul>
-					</li>
-				</ul>
-
-			</div>
-		</section>
-
-		<section class="s-subject">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<h1 class="h-subject">
-							<span class="glyphicon glyphicon-book"></span> Предметы
-						</h1>
-					</div>
-					<div class="col-md-6">
-						<select class="department-select-list">
-							<option>1-40 05 01-04 Информационные системы и технолгии в обработке и представлении информации</option>
-						</select>
-					</div>
-				</div>
-				<div class="subjects">
-					<div class="list-group">
-						<a class="list-group-item active" data-toggle="collapse" href="#Объектно-ориентированное-программирование" aria-expanded="false">
-							<span class="glyphicon glyphicon-folder-open"></span><span class="h-subject-item">Объектно-ориентированное программирование</span><span class="badge">67</span>
-						</a>
-						<div id="Объектно-ориентированное-программирование" class="collapse in">
-							<a class="list-group-item" data-toggle="collapse" href="#Объектно-ориентированное-программирование-Лабораторные-работы" aria-expanded="false">
-								<span class="glyphicon glyphicon-folder-open"></span> Лабораторные работы <span class="badge">24</span>
-							</a>
-							<div id="Объектно-ориентированное-программирование-Лабораторные-работы" class="collapse c-table">
-								<table class="table table-hover table-striped">
-									<thead>
-										<tr>
-										<th><span class="glyphicon glyphicon-duplicate"></span> Файлы </th>
-										<th>Курс</th>
-										<th>Семестр</th>
-										<th>Дата</th>
-										<th>Автор</th>
-										<th>Загрузка</th>
-										<th>Голос</th>
-									</tr>
-									</thead>
-									<tbody>
-									<tr>
-										<td><span class="glyphicon glyphicon-file"></span> Лаба 1 </td>
-										<td>2</td>
-										<td>1</td>
-										<td><span class="glyphicon glyphicon-calendar"></span> 12.06.2016</td>
-										<td><span class="glyphicon glyphicon-user"></span> Noname</td>
-										<td><span class="glyphicon glyphicon-save-file"></span> <a href="#">Скачать</a></td>
-										<td><span class="glyphicon glyphicon-thumbs-up"></span> 12</td>
-									</tr>
-									<tr>
-										<td><span class="glyphicon glyphicon-file"></span> Лаба 2 </td>
-										<td>2</td>
-										<td>1</td>
-										<td><span class="glyphicon glyphicon-calendar"></span> 12.06.2016</td>
-										<td><span class="glyphicon glyphicon-user"></span> Noname</td>
-										<td><span class="glyphicon glyphicon-save-file"></span> <a href="#">Скачать</a></td>
-										<td><span class="glyphicon glyphicon-thumbs-up"></span> 12</td>
-									</tr>
-									<tr>
-										<td><span class="glyphicon glyphicon-file"></span> Лаба 3 </td>
-										<td>2</td>
-										<td>1</td>
-										<td><span class="glyphicon glyphicon-calendar"></span> 12.06.2016</td>
-										<td><span class="glyphicon glyphicon-user"></span> Noname</td>
-										<td><span class="glyphicon glyphicon-save-file"></span> <a href="#">Скачать</a></td>
-										<td><span class="glyphicon glyphicon-thumbs-up"></span> 12</td>
-									</tr>
-									<tr>
-										<td><span class="glyphicon glyphicon-file"></span> Лаба 3 </td>
-										<td>2</td>
-										<td>1</td>
-										<td><span class="glyphicon glyphicon-calendar"></span> 12.06.2016</td>
-										<td><span class="glyphicon glyphicon-user"></span> Noname</td>
-										<td><span class="glyphicon glyphicon-save-file"></span> <a href="#">Скачать</a></td>
-										<td><span class="glyphicon glyphicon-thumbs-up"></span> 12</td>
-									</tr>
-										<tr>
-											<td><span class="glyphicon glyphicon-file"></span> Лаба 3 </td>
-											<td>2</td>
-											<td>1</td>
-											<td><span class="glyphicon glyphicon-calendar"></span> 12.06.2016</td>
-											<td><span class="glyphicon glyphicon-user"></span> Noname</td>
-											<td><span class="glyphicon glyphicon-save-file"></span> <a href="#">Скачать</a></td>
-											<td><span class="glyphicon glyphicon-thumbs-up"></span> 12</td>
-											<tr>
-												<td><span class="glyphicon glyphicon-file"></span> Лаба 3 </td>
-												<td>2</td>
-												<td>1</td>
-												<td><span class="glyphicon glyphicon-calendar"></span> 12.06.2016</td>
-												<td><span class="glyphicon glyphicon-user"></span> Noname</td>
-												<td><span class="glyphicon glyphicon-save-file"></span> <a href="#">Скачать</a></td>
-												<td><span class="glyphicon glyphicon-thumbs-up"></span> 12</td>
-											</tr>
-											<tr>
-												<td><span class="glyphicon glyphicon-file"></span> Лаба 3 </td>
-												<td>2</td>
-												<td>1</td>
-												<td><span class="glyphicon glyphicon-calendar"></span> 12.06.2016</td>
-												<td><span class="glyphicon glyphicon-user"></span> Noname</td>
-												<td><span class="glyphicon glyphicon-save-file"></span> <a href="#">Скачать</a></td>
-												<td><span class="glyphicon glyphicon-thumbs-up"></span> 12</td>
-											</tr>
-										<tr>
-											<td><span class="glyphicon glyphicon-file"></span> Лаба 3 </td>
-											<td>2</td>
-											<td>1</td>
-											<td><span class="glyphicon glyphicon-calendar"></span> 12.06.2016</td>
-											<td><span class="glyphicon glyphicon-user"></span> Noname</td>
-											<td><span class="glyphicon glyphicon-save-file"></span> <a href="#">Скачать</a></td>
-											<td><span class="glyphicon glyphicon-thumbs-up"></span> 12</td>
-										</tr>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-							<a class="list-group-item">
-								<span class="glyphicon glyphicon-folder-close"></span> Шпоргалки <span class="badge">43</span>
-							</a>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</section>
-
-	</article>
+	<ng-view></ng-view>
 
 	<footer>
 		<div class="logo">
@@ -327,7 +60,7 @@
 		<p class="copyright">© Copyright 2015. Белорусский национальный технический университет.</p>
 	</footer>
 
-	<script type="text/javascript">
+	<!--<script type="text/javascript">
 		$(function () {
 			$('#lab').on('show.bs.collapse', function () {
 				$('#lab-up').show();
@@ -347,7 +80,7 @@
 				$('#shpor-down').show();
 			});
 		});
-	</script>
+	</script>-->
 
 	<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modal-head" aria-hidden="true">
 		<div class="modal-dialog">

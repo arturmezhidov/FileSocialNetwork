@@ -39,7 +39,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IFacultyService.cs" />
+    <Compile Include="IRatingService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FileSocialNetwork.Shared.Entities\FileSocialNetwork.Shared.Entities.csproj">
+      <Project>{8422225E-5491-4B4E-934E-3028DBB665C5}</Project>
+      <Name>FileSocialNetwork.Shared.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

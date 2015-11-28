@@ -1,1 +1,63 @@
-﻿<h1>HOME</h1>
+﻿<header>
+
+	<div ng-controller="homeController" class="container">
+		<div class="c-search">
+			<input type="text" placeholder="Поиск" />
+			<span class="glyphicon glyphicon-search"></span>
+		</div>
+		<div class="logo">
+			<img src="Images/logo.png" />
+			<h1>БНТУ Хелпер</h1>
+		</div>
+		<a href="http://www.bntu.by/" class="oficial" target="_blank">Белорусский национальный технический университет</a>
+		<div class="c-statistic row">
+			<div class="col-md-4">
+				<div class="statistic">
+					<h1>{{totalRating.SubjectsCount}}</h1>
+					<p>
+						<span class="glyphicon glyphicon-book"></span> предметов
+					</p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="statistic">
+					<h1>{{totalRating.FilesCount}}</h1>
+					<p>
+						<span class="glyphicon glyphicon-duplicate"></span> файлов
+					</p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="statistic">
+					<h1>{{totalRating.UsersCount}}</h1>
+					<p>
+						<span class="glyphicon glyphicon-user"></span> пользователей
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</header>
+
+<article>
+
+	<section class="s-faculty">
+
+		<ng-include src="'app/faculty/view.html'"></ng-include>
+
+	</section>
+
+	<section class="s-department">
+
+		<ng-include src="'app/home/department/view.html'"></ng-include>
+
+	</section>
+
+	<section class="s-subject">
+
+		<ng-include src="'app/home/subject/view.html'"></ng-include>
+
+	</section>
+
+</article>

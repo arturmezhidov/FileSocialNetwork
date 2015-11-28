@@ -5,20 +5,28 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using FileSocialNetwork.BusinessLogic.Contracts;
+using FileSocialNetwork.Presenter.WebService.Models;
+using FileSocialNetwork.Shared.Entities;
 
 namespace FileSocialNetwork.Presenter.WebService.Controllers
 {
-	public class ValuesController : ApiController
+	public class FacultyController : ApiController
 	{
+		private IFacultyService service;
 
-
+		public FacultyController(IFacultyService service)
+		{
+			this.service = service;
+		}
 
 		// GET api/values
-		public IEnumerable<string> Get()
+		public IEnumerable<FacultyViewModel> Get()
 		{
+			IEnumerable<FacultyViewModel> vm = service
+												.GetFaculties()
+												.Select(faculty => new FacultyViewModel(faculty));
 
-
-			return new string[] { "value122", "value2" };
+			return vm;
 		}
 
 		// GET api/values/5
