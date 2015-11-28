@@ -75,8 +75,7 @@ namespace FileSocialNetwork.DataAccess.SqlDataAccessTest
 					Group = g1,
 					FirstName = "FirstName",
 					LastName = "LastName",
-					YearAmission = 3,
-					YearGraduation = 55
+			
 				};
 
 				User u2 = new User()
@@ -84,8 +83,6 @@ namespace FileSocialNetwork.DataAccess.SqlDataAccessTest
 					Group = g1,
 					FirstName = "FirstName2",
 					LastName = "LastName2",
-					YearAmission = 32,
-					YearGraduation = 552
 				};
 
 				User u3 = new User()
@@ -93,8 +90,6 @@ namespace FileSocialNetwork.DataAccess.SqlDataAccessTest
 					Group = g2,
 					FirstName = "FirstName3",
 					LastName = "LastName3",
-					YearAmission = 33,
-					YearGraduation = 553
 				};
 				db.Users.Add(u1);
 				db.Users.Add(u2);

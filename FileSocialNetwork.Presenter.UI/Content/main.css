@@ -258,15 +258,6 @@ header {
     margin: 20px 0 100px;
 }
 
-.list-group {
-    opacity: 0.8;
-}
-
-    .list-group:hover {
-        opacity: 1;
-        cursor: pointer;
-    }
-
 .subjects .active {
     background: #3D4D66;
     font-size: 16px;
@@ -285,6 +276,16 @@ header {
 }
 
 /* Файл */
+.c-table {
+    border-left: 1px solid #DDDDDD;
+    padding: 0 5px;
+}
+
+.c-table table {
+    margin: 0;
+}
+
+
 .s-file {
     padding-bottom: 100px;
     /*background: #404659;*/
