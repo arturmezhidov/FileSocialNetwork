@@ -1,5 +1,5 @@
-﻿<div class="container">
-	
+﻿<div ng-controller="departmentController" class="container">
+
 	<div class="row">
 		<div class="col-md-6">
 			<h1 class="h-department">
@@ -7,9 +7,7 @@
 			</h1>
 		</div>
 		<div class="col-md-6">
-			<select class="faculty-select-list">
-				<option>Информационных технологий и робототехники (ФИТР)</option>
-			</select>
+			<select ng-model="selectFacultyInfo.faculty" ng-options="faculty.Title for faculty in faculties" class="faculty-select-list"></select>
 		</div>
 	</div>
 

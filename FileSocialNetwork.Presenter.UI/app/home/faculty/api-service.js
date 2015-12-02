@@ -4,11 +4,11 @@
 
 	angular
 		.module('faculty')
-		.service('httpService', httpService);
+		.service('facultyApiService', facultyApiService);
 
-	httpService.$inject = ['$http'];
+	facultyApiService.$inject = ['$http'];
 
-	function httpService($http) {
+	function facultyApiService($http) {
 
 		this.getAll = getAll;
 

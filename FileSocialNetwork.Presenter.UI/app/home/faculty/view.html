@@ -8,7 +8,7 @@
 
 		<ul class="facultiy-list">
 			<li ng-repeat="faculty in faculties">
-				<p>{{faculty.Title}}</p>
+				<p ng-click="select(faculty)">{{faculty.Title}}</p>
 			</li>
 		</ul>
 

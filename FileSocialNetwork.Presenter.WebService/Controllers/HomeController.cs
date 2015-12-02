@@ -20,7 +20,7 @@ namespace FileSocialNetwork.Presenter.WebService.Controllers
 		{
 			ViewBag.Title = "Home Page";
 
-			var t = service.Create("efwfw");
+			//var t = service.Create("efwfw");
 
 			return View();
 		}

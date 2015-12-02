@@ -10,8 +10,6 @@
 
 	function homeController($scope, homeApiService) {
 
-		$scope.faculties = [];
-
 		homeApiService.getTotalRating().success(function (response) {
 			$scope.totalRating = response;
 		});

@@ -1,15 +1,17 @@
 ﻿(function () {
 
-    'use strict';
+	'use strict';
 
-    angular.module('home', []);
-    angular.module('faculty', []);
+	angular.module('home', []);
+	angular.module('faculty', []);
+	angular.module('department', []);
 
-    angular.module('app',
+	angular.module('app',
     [
         'ngRoute',
         'home',
-		'faculty'
+		'faculty',
+		'department'
     ]);
 
 })();
