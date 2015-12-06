@@ -9,6 +9,7 @@ namespace FileSocialNetwork.BusinessLogic.Contracts
 {
 	public interface IDepartmentService
 	{
+		IEnumerable<Cathedra> GetAll();
 		IEnumerable<Cathedra> GetByFacultyId(int id);
 	}
 }

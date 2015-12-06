@@ -60,7 +60,9 @@
     <Content Include="app\app.js" />
     <Content Include="app\home\api-service.js" />
     <Content Include="app\home\controller.js" />
+    <Content Include="app\home\department\api-service.js" />
     <Content Include="app\home\department\controller.js" />
+    <Content Include="app\home\department\factory.js" />
     <Content Include="app\home\department\view.html" />
     <Content Include="app\home\faculty\controller.js" />
     <Content Include="app\home\faculty\api-service.js" />

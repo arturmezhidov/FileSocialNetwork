@@ -15,6 +15,7 @@ namespace FileSocialNetwork.Shared.DependencyInjection
 		{
 			Bind<IFacultyService>().To<FacultyService>();
 			Bind<IRatingService>().To<RatingService>();
+			Bind<IDepartmentService>().To<DepartmentService>();
 		}
 	}
 }

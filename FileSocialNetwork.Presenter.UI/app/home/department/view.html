@@ -7,36 +7,17 @@
 			</h1>
 		</div>
 		<div class="col-md-6">
-			<select ng-model="selectFacultyInfo.faculty" ng-options="faculty.Title for faculty in faculties" class="faculty-select-list"></select>
+			<select ng-model="selectFacultyInfo.faculty" ng-options="faculty.Title for faculty in faculties" class="faculty-select-list">
+				<!--<option value="">Выберите факультет</option>-->
+			</select>
 		</div>
 	</div>
 
 	<ul class="department-list">
-		<li>
-			<p class="h-speciality">Программное обеспечение вычислительной техники и автоматизированных систем</p>
-			<ul class="speciality-list">
-				<li>1-40 01 01 Программное обеспечение информационных технологий</li>
-				<li>1-40 05 01-04 Информационные системы и технолгии в обработке и представлении информации</li>
-			</ul>
-		</li>
-		<li>
-			<p class="h-speciality">Системы автоматизированного проектирования</p>
-			<ul class="speciality-list">
-				<li>1-40 05 01-01 Информационные системы и технологии в проектировании и производстве</li>
-			</ul>
-		</li>
-		<li>
-			<p class="h-speciality">Робототехнические системы</p>
-			<ul class="speciality-list">
-				<li>1-53 01 01 Автоматизация технологических процессов и производств</li>
-				<li>1-53 01 02 Автоматизированные системы обработки информации</li>
-				<li>1-53 01 06 Промышленные роботы и робототехнические комплексы</li>
-			</ul>
-		</li>
-		<li>
-			<p class="h-speciality">Электропривод и автоматизация промышленных установок и технологических комплексов</p>
-			<ul class="speciality-list">
-				<li>1-53 01 05 Автоматизированные электроприводы</li>
+		<li ng-repeat="dep in departments | departmentFilter : selectFacultyInfo.faculty.Id" ng-model="filteredDepartments.items" ng-click="select(dep)">
+			<p class="h-speciality">{{dep.Title}}</p>
+			<ul ng-repeat="spec in dep.Specialities" class="speciality-list">
+				<li>{{spec.Number}} {{spec.Title}}</li>
 			</ul>
 		</li>
 	</ul>
