@@ -7,14 +7,14 @@
 			</h1>
 		</div>
 		<div class="col-md-6">
-			<select ng-model="selectFacultyInfo.faculty" ng-options="faculty.Title for faculty in faculties" class="faculty-select-list">
+			<select ng-model="faculties.select" ng-options="faculty.Title for faculty in faculties.items" class="faculty-select-list">
 				<!--<option value="">Выберите факультет</option>-->
 			</select>
 		</div>
 	</div>
 
 	<ul class="department-list">
-		<li ng-repeat="dep in departments | departmentFilter : selectFacultyInfo.faculty.Id" ng-model="filteredDepartments.items" ng-click="select(dep)">
+		<li ng-repeat="dep in faculties.select.Departments" ng-click="select(dep)">
 			<p class="h-speciality">{{dep.Title}}</p>
 			<ul ng-repeat="spec in dep.Specialities" class="speciality-list">
 				<li>{{spec.Number}} {{spec.Title}}</li>

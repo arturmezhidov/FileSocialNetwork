@@ -57,17 +57,24 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\account\account-service.js" />
+    <Content Include="app\account\login\controller.js" />
+    <Content Include="app\account\login\view.html" />
+    <Content Include="app\account\api-service.js" />
+    <Content Include="app\account\menu\controller.js" />
+    <Content Include="app\account\menu\view.html" />
+    <Content Include="app\account\register\controller.js" />
+    <Content Include="app\account\register\register-view-model.js" />
+    <Content Include="app\account\register\view.html" />
     <Content Include="app\app.js" />
-    <Content Include="app\home\api-service.js" />
+    <Content Include="app\data-access\api-service.js" />
+    <Content Include="app\data-access\data-context.js" />
     <Content Include="app\home\controller.js" />
-    <Content Include="app\home\department\api-service.js" />
     <Content Include="app\home\department\controller.js" />
-    <Content Include="app\home\department\factory.js" />
     <Content Include="app\home\department\view.html" />
     <Content Include="app\home\faculty\controller.js" />
-    <Content Include="app\home\faculty\api-service.js" />
-    <Content Include="app\home\faculty\factory.js" />
     <Content Include="app\home\faculty\view.html" />
+    <Content Include="app\home\subject\controller.js" />
     <Content Include="app\home\subject\view.html" />
     <Content Include="app\home\view.html" />
     <Content Include="app\routing.js" />

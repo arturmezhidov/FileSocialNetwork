@@ -1,0 +1,22 @@
+﻿<ul class="nav navbar-nav navbar-right" ng-controller="menuController">
+	<li ng-hide="status.isAuthorize">
+		<a href="/#/login">
+			<span class="glyphicon glyphicon-lock"></span> Вход
+		</a>
+	</li>
+	<li ng-hide="status.isAuthorize">
+		<a href="/#/register">
+			<span class="glyphicon glyphicon-user"></span> Регистрация
+		</a>
+	</li>
+	<li ng-show="status.isAuthorize">
+		<a href="#/" ng-click="logout()">
+			<span class="glyphicon glyphicon-lock"></span> Выход
+		</a>
+	</li>
+	<li ng-show="status.isAuthorize">
+		<a href="/#/profile">
+			<span class="glyphicon glyphicon-user"></span> {{status.data.userName}}
+		</a>
+	</li>
+</ul>

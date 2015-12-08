@@ -24,7 +24,7 @@ namespace FileSocialNetwork.Presenter.WebService.Controllers
 		{
 			IEnumerable<FacultyViewModel> vm = service
 												.GetFaculties()
-												.Select(faculty => new FacultyViewModel(faculty));
+												.Select(ToFacultyViewModel);
 
 			return vm;
 		}
@@ -49,5 +49,24 @@ namespace FileSocialNetwork.Presenter.WebService.Controllers
 		public void Delete(int id)
 		{
 		}
+
+		protected FacultyViewModel ToFacultyViewModel(Faculty faculty)
+		{
+			FacultyViewModel vm = new FacultyViewModel(faculty);
+			vm.Departments = faculty
+								.Cathedras
+								.Select(ToDepartmentViewModel)
+								.ToList();
+			return vm;
+		}
+		protected DepartmentViewModel ToDepartmentViewModel(Cathedra department)
+		{
+			DepartmentViewModel vm = new DepartmentViewModel(department);
+			vm.Specialities = department
+								.Specialities
+								.Select(s => new SpecialityViewModel(s))
+								.ToList();
+			return vm;
+		} 
 	}
 }

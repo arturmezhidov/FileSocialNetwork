@@ -6,12 +6,12 @@
 		.module('home')
 		.controller('homeController', homeController);
 
-	homeController.$inject = ['$scope', 'homeApiService'];
+	homeController.$inject = ['$scope', 'dataContext'];
 
-	function homeController($scope, homeApiService) {
+	function homeController($scope, dataContext) {
 
-		homeApiService.getTotalRating().success(function (response) {
-			$scope.totalRating = response;
+		dataContext.getRating(function(rating) {
+			$scope.totalRating = rating;
 		});
 	}
 

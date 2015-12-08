@@ -6,17 +6,16 @@
 		.module('faculty')
 		.controller('facultyController', facultyController);
 
-	facultyController.$inject = ['$scope', 'facultyApiService', 'facultyFactory'];
+	facultyController.$inject = ['$scope', 'dataContext'];
 
-	function facultyController($scope, facultyApiService, facultyFactory) {
+	function facultyController($scope, dataContext) {
 
-		facultyApiService.getAll().success(function (response) {
-			facultyFactory.update(response);
-			$scope.faculties = facultyFactory.get();
+		dataContext.getFaculties(function (faculties) {
+			$scope.faculties = faculties.items;
 		});
 
 		$scope.select = function (faculty) {
-			facultyFactory.selectInfo.faculty = faculty;
+			dataContext.setSelectFaculty(faculty.Id);
 		}
 	}
 })();

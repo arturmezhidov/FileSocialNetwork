@@ -1,0 +1,91 @@
+﻿<div class="c-register">
+	<div class="container">
+		<div>
+			<h2>
+				<span class="glyphicon glyphicon-user"></span> Регистрация
+			</h2>
+		</div>
+		<div>
+			<form name="form" class="form-horizontal form-register css-form" role="form">
+				<div class="form-group">
+					<label for="register-firstname" class="col-sm-4 control-label">Имя</label>
+					<div class="col-sm-4">
+						<input ng-model="firstName" name="firstName" class="form-control" id="register-firstname" placeholder="Имя" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="register-lastname" class="col-sm-4 control-label">Фамилия</label>
+					<div class="col-sm-4">
+						<input ng-model="lastName" class="form-control" id="register-lastname" placeholder="Фамилия" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="register-username" class="col-sm-4 control-label">Логин</label>
+					<div class="col-sm-4">
+						<input ng-model="login" class="form-control" id="register-username" placeholder="Логин" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="register-password" class="col-sm-4 control-label">Пароль</label>
+					<div class="col-sm-4">
+						<input ng-model="pass" type="password" class="form-control" id="register-password" placeholder="Пароль" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="register-password2" class="col-sm-4 control-label">Повтор пароля</label>
+					<div class="col-sm-4">
+						<input ng-model="pass2" type="password" class="form-control" id="register-password2" placeholder="Повтор пароля" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="register-email" class="col-sm-4 control-label">Почта</label>
+					<div class="col-sm-4">
+						<input ng-model="email" type="email" class="form-control" id="register-email" placeholder="Почта" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="register-phone" class="col-sm-4 control-label">Телефон</label>
+					<div class="col-sm-4">
+						<input ng-model="phone" class="form-control" id="register-phone" placeholder="Телефон">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="register-faculty" class="col-sm-4 control-label">Факультет</label>
+					<div class="col-sm-4">
+						<select id="register-faculty" ng-model="selectFaculty" ng-options="faculty.Title for faculty in faculties.items" class="form-control"></select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="register-departament" class="col-sm-4 control-label">Кафедра</label>
+					<div class="col-sm-4">
+						<select id="register-departament" ng-model="selectDepartment" ng-options="dep.Title for dep in selectFaculty.Departments" class="form-control"></select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="register-speciality" class="col-sm-4 control-label">Специальность</label>
+					<div class="col-sm-4">
+						<select id="register-speciality" ng-model="selectSpeciality" ng-options="spec.Title for spec in selectDepartment.Specialities" class="form-control"></select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="register-group" class="col-sm-4 control-label">Группа</label>
+					<div class="col-sm-4">
+						<select id="register-group" ng-model="selectGroup" ng-options="group.Number for group in groups" class="form-control"></select>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="row" ng-show="error">
+			<div class="col-sm-offset-4 col-sm-4">
+				<p class="error">{{errorMessage}}</p>
+			</div>
+		</div>
+		<br/>
+		<div class="row">
+			<div class="col-sm-offset-4 col-sm-4">
+				<button ng-click="register()" ng-disabled="form.$invalid" type="button" class="btn btn-primary"> Зарегистрировать </button>
+			</div>
+		</div>
+		<br/>
+	</div>
+</div>

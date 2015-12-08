@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FileSocialNetwork.BusinessLogic.BusinessComponents;
+﻿using FileSocialNetwork.BusinessLogic.BusinessComponents;
 using FileSocialNetwork.BusinessLogic.Contracts;
 using Ninject.Modules;
 
@@ -16,6 +11,7 @@ namespace FileSocialNetwork.Shared.DependencyInjection
 			Bind<IFacultyService>().To<FacultyService>();
 			Bind<IRatingService>().To<RatingService>();
 			Bind<IDepartmentService>().To<DepartmentService>();
+			Bind<IUserService>().To<UserService>();
 		}
 	}
 }

@@ -258,18 +258,18 @@ header {
     margin: 20px 0 100px;
 }
 
-.subjects .active {
-    background: #3D4D66;
-    font-size: 16px;
-}
-
-    .subjects .active:hover {
+    .subjects .active {
         background: #3D4D66;
+        font-size: 16px;
     }
 
-    .subjects .active .badge {
-        color: #3D4D66;
-    }
+        .subjects .active:hover {
+            background: #3D4D66;
+        }
+
+        .subjects .active .badge {
+            color: #3D4D66;
+        }
 
 .h-subject-item {
     margin-left: 10px;
@@ -281,9 +281,9 @@ header {
     padding: 0 5px;
 }
 
-.c-table table {
-    margin: 0;
-}
+    .c-table table {
+        margin: 0;
+    }
 
 
 .s-file {
@@ -451,3 +451,39 @@ footer {
     color: #DCDCDC;
     margin: 30px;
 }
+
+
+/* Register */
+
+.c-register {
+    display: block;
+    width: 100%;
+    min-height: 650px;
+    background: url('../Images/header_bg2.jpg') no-repeat;
+    background-size: cover;
+    padding-top: 50px;
+    color: white;
+}
+
+.form-register input, select {
+    height: 36px;
+    padding: 0 10px;
+    outline: none;
+    border: none;
+    border-right: 1px solid gray;
+    margin: 1px 0 0;
+    padding-bottom: 2px;
+    border-radius: 0;
+    border: none;
+    opacity: 0.6;
+    color: black;
+    font-weight: bold;
+}
+
+ .css-form input.ng-invalid.ng-dirty {
+        background-color: #FA787E;
+      }
+    
+      .css-form input.ng-valid.ng-dirty {
+        background-color: #78FA89;
+      }

@@ -11,5 +11,6 @@ namespace FileSocialNetwork.BusinessLogic.Contracts
 	{
 		IEnumerable<Cathedra> GetAll();
 		IEnumerable<Cathedra> GetByFacultyId(int id);
+		IEnumerable<Group> GetBGroupsBySpecialityId(int id);
 	}
 }

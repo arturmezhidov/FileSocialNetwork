@@ -34,5 +34,17 @@ namespace FileSocialNetwork.BusinessLogic.BusinessComponents
 
 			return new List<Cathedra>();
 		}
+
+		public IEnumerable<Group> GetBGroupsBySpecialityId(int id)
+		{
+			Speciality speciality = uow.Specialities.GetById(id);
+
+			if (speciality != null)
+			{
+				return speciality.Groups;
+			}
+
+			return new List<Group>();
+		} 
 	}
 }
