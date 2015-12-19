@@ -230,6 +230,7 @@ namespace FileSocialNetwork.Presenter.WebService.Controllers
 		[HostAuthentication(DefaultAuthenticationTypes.ExternalCookie)]
 		[AllowAnonymous]
 		[Route("ExternalLogin", Name = "ExternalLogin")]
+        [EnableCors("*", "*", "*")]
 		public async Task<IHttpActionResult> GetExternalLogin(string provider, string error = null)
 		{
 			if (error != null)
@@ -326,6 +327,7 @@ namespace FileSocialNetwork.Presenter.WebService.Controllers
 		// POST api/Account/Register
 		[AllowAnonymous]
 		[Route("Register")]
+        [EnableCors("*", "*", "*")]
 		public async Task<IHttpActionResult> Register(RegisterBindingModel model)
 		{
 			if (!ModelState.IsValid)
@@ -390,6 +392,10 @@ namespace FileSocialNetwork.Presenter.WebService.Controllers
 			}
 			return Ok();
 		}
+
+        // POST api/Account/ConfirmLogin
+
+
 
 		protected override void Dispose(bool disposing)
 		{

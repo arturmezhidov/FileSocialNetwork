@@ -15,6 +15,7 @@ namespace FileSocialNetwork.Shared.Entities
 		public int UserId { get; set; }
 		public string UserName { get; set; }
 		public int Likes { get; set; }
+        public bool Liked { get; set; }
 		public string Url { get; set; }
 	}
 }

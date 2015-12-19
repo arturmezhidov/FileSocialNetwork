@@ -6,18 +6,19 @@
 		.module('account')
 		.controller('loginController', loginController);
 
-	loginController.$inject = ['$scope', '$location', 'accountService'];
+	loginController.$inject = ['$scope', 'accountService'];
 
-	function loginController($scope, $location, accountService) {
-
+	function loginController($scope, accountService) {
 		$scope.login = function () {
 			accountService.login($scope.username, $scope.password, function() {
-				$scope.error = false;
-				$location.path('/');
+			    $scope.error = false;
+			    accountService.redirect();
+				
 			}, function (err) {
 				$scope.error = true;
 				$scope.errorMessage = err;
 			});
 		}
 	}
+
 })();

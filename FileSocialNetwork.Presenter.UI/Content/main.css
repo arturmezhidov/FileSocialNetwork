@@ -22,6 +22,16 @@ ul {
 	padding-left: 8px;
 }
 
+.edit {
+    font-size: 25px;
+    margin-left: 20px;
+}
+.edit:hover {
+    color: #64748D;
+    cursor: pointer;
+     font-size: 27px;
+}
+
 /* Меню */
 
 nav {
@@ -472,6 +482,11 @@ header {
 	height: 36px;
 	opacity: 0.7;
 	border-left: 1px solid gray;
+}
+
+.glyphicon-remove:hover {
+    color: red;
+    cursor: pointer;
 }
 
 

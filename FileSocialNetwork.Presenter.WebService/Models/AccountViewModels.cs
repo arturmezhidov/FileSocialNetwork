@@ -40,4 +40,10 @@ namespace FileSocialNetwork.Presenter.WebService.Models
 
         public string ProviderKey { get; set; }
     }
+
+    public class ConfirmLoginViewModel
+    {
+        public bool IsAuthorize { get; set; }
+        public bool IsAdmin { get; set; }
+    }
 }

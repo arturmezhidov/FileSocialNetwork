@@ -55,6 +55,7 @@
     <Compile Include="SubjectFiles.cs" />
     <Compile Include="TotalRating.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="UserLike.cs" />
     <Compile Include="UserMessage.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

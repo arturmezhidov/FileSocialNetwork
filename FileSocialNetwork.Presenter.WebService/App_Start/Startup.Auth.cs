@@ -39,9 +39,10 @@ namespace FileSocialNetwork.Presenter.WebService
 				Provider = new ApplicationOAuthProvider(PublicClientId),
 				AuthorizeEndpointPath = new PathString("/api/Account/ExternalLogin"),
 				AccessTokenExpireTimeSpan = TimeSpan.FromDays(14),
-				AllowInsecureHttp = true
+				AllowInsecureHttp = true,
+                
 			};
-
+           
 			// Включение использования приложением маркера-носителя для аутентификации пользователей
 			app.UseOAuthBearerTokens(OAuthOptions);
 

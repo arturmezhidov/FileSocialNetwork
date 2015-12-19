@@ -40,5 +40,40 @@ namespace FileSocialNetwork.BusinessLogic.BusinessComponents
 
             return file;
         }
+
+        public UserLike Liking(int userId, int fileId)
+        {
+            File file = context.Files.GetById(fileId);
+
+            if (file == null)
+            {
+                return null;
+            }
+
+            Like like = file.Likes.FirstOrDefault(item => item.UserId == userId);
+
+            if (like == null)
+            {
+                context.Likes.Create(new Like
+                {
+                    UserId = userId,
+                    FileId = fileId
+                });
+            }
+            else
+            {
+                context.Likes.Delete(like.Id);
+            }
+
+            context.Save();
+
+            UserLike userLike = new UserLike
+            {
+                Liked = (like == null),
+                LikesCount = file.Likes.Count
+            };
+
+            return userLike;
+        }
 	}
 }

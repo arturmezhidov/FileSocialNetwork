@@ -22,6 +22,7 @@
 
 	<script src="app/app.js"></script>
 	<script src="app/routing.js"></script>
+    <script src="app/config.js"></script>
 
 	<script src="app/data-access/api-service.js"></script>
 	<script src="app/data-access/data-context.js"></script>
@@ -31,7 +32,6 @@
 	<script src="app/home/department/controller.js"></script>
 	<script src="app/home/subject/controller.js"></script>
 
-	<script src="app/account/api-service.js"></script>
 	<script src="app/account/account-service.js"></script>
 	<script src="app/account/register/register-view-model.js"></script>
 	<script src="app/account/register/controller.js"></script>
@@ -58,13 +58,7 @@
 				</button>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
-				<ul class="nav navbar-nav">
-					<li><a ng-click="toTheTop()"><span class="glyphicon glyphicon-home"></span> Начало</a></li>
-					<li><a ng-click="toFaculty()"><span class="glyphicon glyphicon-education"></span> Факультеты</a></li>
-					<li><a ng-click="toDepartment()"><span class="glyphicon glyphicon-briefcase"></span> Кафедры</a></li>
-					<li><a ng-click="toSubject()"><span class="glyphicon glyphicon-book"></span> Предметы</a></li>
-					<li><a href="#/upload"><span class="glyphicon glyphicon-open-file"></span> Загрузить</a></li>
-				</ul>
+                <ng-include src="'app/navigate/view.html'"></ng-include>
 				<ng-include src="'app/account/menu/view.html'"></ng-include>
 			</div>
 		</div>

@@ -33,6 +33,7 @@ using FileSocialNetwork.Presenter.WebService.Providers;
 
 namespace FileSocialNetwork.Presenter.WebService.Controllers
 {
+    [Authorize]
     public class FileController : ApiController
     {
         private IFileService service;

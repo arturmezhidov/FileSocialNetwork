@@ -6,10 +6,12 @@
 		.module('file')
 		.controller('fileLoadController', fileLoadController);
 
-    fileLoadController.$inject = ['$scope', 'dataContext', 'fileLoadService', '$timeout'];
+    fileLoadController.$inject = ['$scope', 'dataContext', 'fileLoadService', '$timeout', 'accountService'];
 
-    function fileLoadController($scope, dataContext, fileLoadService, $timeout) {
+    function fileLoadController($scope, dataContext, fileLoadService, $timeout, accountService) {
 
+        accountService.check('/upload');
+ 
         $scope.file = null;
         $scope.isValid = false;
         $scope.progress = '0%';

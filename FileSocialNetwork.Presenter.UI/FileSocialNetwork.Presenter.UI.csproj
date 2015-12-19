@@ -60,13 +60,13 @@
     <Content Include="app\account\account-service.js" />
     <Content Include="app\account\login\controller.js" />
     <Content Include="app\account\login\view.html" />
-    <Content Include="app\account\api-service.js" />
     <Content Include="app\account\menu\controller.js" />
     <Content Include="app\account\menu\view.html" />
     <Content Include="app\account\register\controller.js" />
     <Content Include="app\account\register\register-view-model.js" />
     <Content Include="app\account\register\view.html" />
     <Content Include="app\app.js" />
+    <Content Include="app\config.js" />
     <Content Include="app\data-access\api-service.js" />
     <Content Include="app\data-access\data-context.js" />
     <Content Include="app\file-loader\controller.js" />
@@ -82,6 +82,7 @@
     <Content Include="app\home\subject\view.html" />
     <Content Include="app\home\view.html" />
     <Content Include="app\navigate\controller.js" />
+    <Content Include="app\navigate\view.html" />
     <Content Include="app\routing.js" />
     <Content Include="content\bootstrap-theme.css" />
     <Content Include="content\bootstrap-theme.min.css" />

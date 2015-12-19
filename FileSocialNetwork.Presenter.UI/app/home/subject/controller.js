@@ -17,7 +17,7 @@
 		$scope.departments = dataContext.getDepartments();
 
 		$scope.$watch('departments.select', function (newValue) {
-			if (newValue) {
+		    if (newValue && newValue.Id) {
 				dataContext.getByDepartmentId(newValue.Id).success(function (data) {
 					$scope.subjects = data;
 				});
