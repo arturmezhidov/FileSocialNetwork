@@ -6,112 +6,42 @@
 			</h1>
 		</div>
 		<div class="col-md-6">
-			<!--<select ng-model="selectDepartmentInfo.department" ng-options="department.Title for department in departments | departmentFilter : selectFacultyInfo.faculty.Id" class="department-select-list"></select>-->
+			<select ng-model="departments.select" ng-options="department.Title for department in faculties.select.Departments" class="department-select-list"></select>
 		</div>
 	</div>
 	<div class="subjects">
-		<div class="list-group">
-			<a class="list-group-item active" data-toggle="collapse" href="#Объектно-ориентированное-программирование" aria-expanded="false">
-				<span class="glyphicon glyphicon-folder-open"></span><span class="h-subject-item">Объектно-ориентированное программирование</span><span class="badge">67</span>
-			</a>
-			<div id="Объектно-ориентированное-программирование" class="collapse in">
-				<a class="list-group-item" data-toggle="collapse" href="#Объектно-ориентированное-программирование-Лабораторные-работы" aria-expanded="false">
-					<span class="glyphicon glyphicon-folder-open"></span> Лабораторные работы <span class="badge">24</span>
-				</a>
-				<div id="Объектно-ориентированное-программирование-Лабораторные-работы" class="collapse c-table">
-					<table class="table table-hover table-striped">
-						<thead>
-						<tr>
-							<th><span class="glyphicon glyphicon-duplicate"></span> Файлы </th>
-							<th>Курс</th>
-							<th>Семестр</th>
-							<th>Дата</th>
-							<th>Автор</th>
-							<th>Загрузка</th>
-							<th>Голос</th>
-						</tr>
-						</thead>
-						<tbody>
-						<tr>
-							<td><span class="glyphicon glyphicon-file"></span> Лаба 1 </td>
-							<td>2</td>
-							<td>1</td>
-							<td><span class="glyphicon glyphicon-calendar"></span> 12.06.2016</td>
-							<td><span class="glyphicon glyphicon-user"></span> Noname</td>
-							<td><span class="glyphicon glyphicon-save-file"></span> <a href="#">Скачать</a></td>
-							<td><span class="glyphicon glyphicon-thumbs-up"></span> 12</td>
-						</tr>
-						<tr>
-							<td><span class="glyphicon glyphicon-file"></span> Лаба 2 </td>
-							<td>2</td>
-							<td>1</td>
-							<td><span class="glyphicon glyphicon-calendar"></span> 12.06.2016</td>
-							<td><span class="glyphicon glyphicon-user"></span> Noname</td>
-							<td><span class="glyphicon glyphicon-save-file"></span> <a href="#">Скачать</a></td>
-							<td><span class="glyphicon glyphicon-thumbs-up"></span> 12</td>
-						</tr>
-						<tr>
-							<td><span class="glyphicon glyphicon-file"></span> Лаба 3 </td>
-							<td>2</td>
-							<td>1</td>
-							<td><span class="glyphicon glyphicon-calendar"></span> 12.06.2016</td>
-							<td><span class="glyphicon glyphicon-user"></span> Noname</td>
-							<td><span class="glyphicon glyphicon-save-file"></span> <a href="#">Скачать</a></td>
-							<td><span class="glyphicon glyphicon-thumbs-up"></span> 12</td>
-						</tr>
-						<tr>
-							<td><span class="glyphicon glyphicon-file"></span> Лаба 3 </td>
-							<td>2</td>
-							<td>1</td>
-							<td><span class="glyphicon glyphicon-calendar"></span> 12.06.2016</td>
-							<td><span class="glyphicon glyphicon-user"></span> Noname</td>
-							<td><span class="glyphicon glyphicon-save-file"></span> <a href="#">Скачать</a></td>
-							<td><span class="glyphicon glyphicon-thumbs-up"></span> 12</td>
-						</tr>
-						<tr>
-							<td><span class="glyphicon glyphicon-file"></span> Лаба 3 </td>
-							<td>2</td>
-							<td>1</td>
-							<td><span class="glyphicon glyphicon-calendar"></span> 12.06.2016</td>
-							<td><span class="glyphicon glyphicon-user"></span> Noname</td>
-							<td><span class="glyphicon glyphicon-save-file"></span> <a href="#">Скачать</a></td>
-							<td><span class="glyphicon glyphicon-thumbs-up"></span> 12</td>
-							<tr>
-								<td><span class="glyphicon glyphicon-file"></span> Лаба 3 </td>
-								<td>2</td>
-								<td>1</td>
-								<td><span class="glyphicon glyphicon-calendar"></span> 12.06.2016</td>
-								<td><span class="glyphicon glyphicon-user"></span> Noname</td>
-								<td><span class="glyphicon glyphicon-save-file"></span> <a href="#">Скачать</a></td>
-								<td><span class="glyphicon glyphicon-thumbs-up"></span> 12</td>
-							</tr>
-							<tr>
-								<td><span class="glyphicon glyphicon-file"></span> Лаба 3 </td>
-								<td>2</td>
-								<td>1</td>
-								<td><span class="glyphicon glyphicon-calendar"></span> 12.06.2016</td>
-								<td><span class="glyphicon glyphicon-user"></span> Noname</td>
-								<td><span class="glyphicon glyphicon-save-file"></span> <a href="#">Скачать</a></td>
-								<td><span class="glyphicon glyphicon-thumbs-up"></span> 12</td>
-							</tr>
-							<tr>
-								<td><span class="glyphicon glyphicon-file"></span> Лаба 3 </td>
-								<td>2</td>
-								<td>1</td>
-								<td><span class="glyphicon glyphicon-calendar"></span> 12.06.2016</td>
-								<td><span class="glyphicon glyphicon-user"></span> Noname</td>
-								<td><span class="glyphicon glyphicon-save-file"></span> <a href="#">Скачать</a></td>
-								<td><span class="glyphicon glyphicon-thumbs-up"></span> 12</td>
-							</tr>
-						</tr>
-						</tbody>
-					</table>
-				</div>
-				<a class="list-group-item">
-					<span class="glyphicon glyphicon-folder-close"></span> Шпоргалки <span class="badge">43</span>
-				</a>
-			</div>
-		</div>
+        <div ng-repeat="subject in subjects" class="list-group" ng-show="subject.Categories.length">
+            <a class="list-group-item active">
+                <span class="glyphicon glyphicon-folder-open"></span><span class="h-subject-item">{{subject.SubjectTitle}}</span><span class="badge">{{subject.FilesCount}}</span>
+            </a>
+            <div ng-repeat="category in subject.Categories">
+                <a class="list-group-item">
+                    <span class="glyphicon glyphicon-folder-open"></span> {{category.Category}} <span class="badge">{{category.Files.Count}}</span>
+                </a>
+                <div class="c-table">
+                    <table class="table table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th><span class="glyphicon glyphicon-duplicate"></span> Файлы </th>
+                                <th>Автор</th>
+                                <th>Дата</th>
+                                <th>Загрузка</th>
+                                <th>Голос</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="file in category.Files">
+                                <td><span class="glyphicon glyphicon-file"></span> {{file.Description}} </td>
+                                <td><span class="glyphicon glyphicon-user"></span> {{file.UserName}}</td>
+                                <td><span class="glyphicon glyphicon-calendar"></span> {{file.DateOfCreate}}</td>
+                                <td><span class="glyphicon glyphicon-save-file"></span> <a href="{{file.Url}}">Скачать</a></td>
+                                <td><span class="glyphicon glyphicon-thumbs-up"></span> {{file.Likes}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
 	</div>
 
 </div>

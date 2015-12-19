@@ -20,6 +20,11 @@
                             	controller: 'loginController',
                             	controllerAs: 'ctrl'
                             })
+				            .when('/upload', {
+				            	templateUrl: '/app/file-loader/view.html',
+				            	controller: 'fileLoadController',
+				            	controllerAs: 'ctrl'
+				            })
                             .otherwise({
                             	redirectTo: '/'
                             });

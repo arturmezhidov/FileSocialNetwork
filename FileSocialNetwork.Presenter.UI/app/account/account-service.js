@@ -12,7 +12,8 @@
 
 		var status = {
 			data: {},
-			isAuthorize: false
+			isAuthorize: false,
+			isAdmin: false
 		};
 
 		this.register = register;
@@ -40,6 +41,7 @@
 			}).error(function (err) {
 				status.data = { };
 				status.isAuthorize = false;
+				status.isAdmin = false;
 				if (typeof (error) == 'function') {
 					error(err.error_description);
 				}
@@ -48,6 +50,7 @@
 		function logout() {
 			status.data = {};
 			status.isAuthorize = false;
+			status.isAdmin = false;
 			accountApiService.logout();
 		}
 		function getStatus() {

@@ -6,9 +6,11 @@ using System.Net.Http;
 using System.Web.Http;
 using FileSocialNetwork.BusinessLogic.Contracts;
 using FileSocialNetwork.Presenter.WebService.Models;
+using System.Web.Http.Cors;
 
 namespace FileSocialNetwork.Presenter.WebService.Controllers
 {
+    [EnableCors("*", "*", "*")]
 	public class GroupController : ApiController
 	{
 		private IDepartmentService service;

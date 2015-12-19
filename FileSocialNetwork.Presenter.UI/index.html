@@ -1,16 +1,24 @@
 ﻿<!DOCTYPE html>
 <html ng-app="app" id="ng-app" xmlns:ng="http://angularjs.org">
 <head>
-	<meta charset="utf-8" />
-	<title>File Social Network</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Angular File Upload</title>
+ 
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link href="Content/bootstrap.css" rel="stylesheet" />
 	<link href="Content/main.css" rel="stylesheet" />
-
-	<script src="scripts/jquery-1.9.1.js"></script>
-	<script src="scripts/bootstrap.js"></script>
 	<script src="scripts/angular.js"></script>
+    <script src="scripts/jquery-2.1.4.js"></script>
+	<script src="scripts/bootstrap.js"></script>
+
 	<script src="scripts/angular-route.js"></script>
+	<script src="scripts/angular-scroll.js"></script>
+    <script src="scripts/angular-animate.js"></script>
+	<script src="scripts/ng-file-upload-shim.js"></script>
+	<script src="scripts/ng-file-upload.js"></script>
 
 	<script src="app/app.js"></script>
 	<script src="app/routing.js"></script>
@@ -19,11 +27,8 @@
 	<script src="app/data-access/data-context.js"></script>
 
 	<script src="app/home/controller.js"></script>
-
 	<script src="app/home/faculty/controller.js"></script>
-
 	<script src="app/home/department/controller.js"></script>
-
 	<script src="app/home/subject/controller.js"></script>
 
 	<script src="app/account/api-service.js"></script>
@@ -33,10 +38,16 @@
 	<script src="app/account/login/controller.js"></script>
 	<script src="app/account/menu/controller.js"></script>
 
+	<script src="app/navigate/controller.js"></script>
+ 
+	<script src="app/file-loader/controller.js"></script>
+    <script src="app/file-loader/upload-service.js"></script>
+	<script src="app/file-loader/file-directive.js"></script>
+
 </head>
 <body>
 
-	<nav class="navbar  navbar-fixed-top">
+	<nav ng-controller="navigateController" class="navbar navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -48,11 +59,11 @@
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="#/"><span class="glyphicon glyphicon-home"></span> Начало</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-education"></span> Факультеты</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-briefcase"></span> Кафедры</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-book"></span> Предметы</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-duplicate"></span> Файлы</a></li>
+					<li><a ng-click="toTheTop()"><span class="glyphicon glyphicon-home"></span> Начало</a></li>
+					<li><a ng-click="toFaculty()"><span class="glyphicon glyphicon-education"></span> Факультеты</a></li>
+					<li><a ng-click="toDepartment()"><span class="glyphicon glyphicon-briefcase"></span> Кафедры</a></li>
+					<li><a ng-click="toSubject()"><span class="glyphicon glyphicon-book"></span> Предметы</a></li>
+					<li><a href="#/upload"><span class="glyphicon glyphicon-open-file"></span> Загрузить</a></li>
 				</ul>
 				<ng-include src="'app/account/menu/view.html'"></ng-include>
 			</div>
@@ -69,68 +80,5 @@
 		<p class="copyright">© Copyright 2015. Белорусский национальный технический университет.</p>
 	</footer>
 
-	<!--<script type="text/javascript">
-		$(function () {
-			$('#lab').on('show.bs.collapse', function () {
-				$('#lab-up').show();
-				$('#lab-down').hide();
-			});
-			$('#lab').on('hide.bs.collapse', function () {
-				$('#lab-up').hide();
-				$('#lab-down').show();
-			});
-
-			$('#shpor').on('show.bs.collapse', function () {
-				$('#shpor-up').show();
-				$('#shpor-down').hide();
-			});
-			$('#shpor').on('hide.bs.collapse', function () {
-				$('#shpor-up').hide();
-				$('#shpor-down').show();
-			});
-		});
-	</script>-->
-
-	<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modal-head" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					<h4 class="modal-title" id="login-modal-head"><span class="glyphicon glyphicon-lock"></span> Вход </h4>
-				</div>
-				<div class="modal-body">
-					<form class="form-horizontal" role="form">
-						<div class="form-group">
-							<label for="login-username" class="col-sm-2 control-label">Логин</label>
-							<div class="col-sm-10">
-								<input class="form-control" id="login-username" placeholder="Логин">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="login-password" class="col-sm-2 control-label">Пароль</label>
-							<div class="col-sm-10">
-								<input type="password" class="form-control" id="login-password" placeholder="Пароль">
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="col-sm-offset-2 col-sm-10">
-								<div class="checkbox">
-									<label>
-										<input type="checkbox"> Запомнить меня
-									</label>
-								</div>
-							</div>
-						</div>
-					</form>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-primary"> Войти </button>
-					<button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	
 </body>
 </html>

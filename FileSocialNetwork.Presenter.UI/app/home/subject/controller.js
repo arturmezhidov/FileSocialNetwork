@@ -6,25 +6,22 @@
 		.module('subject')
 		.controller('subjectController', subjectController);
 
-	subjectController.$inject = ['$scope'];
+	subjectController.$inject = ['$scope', 'dataContext'];
 
-	function subjectController($scope, facultyFactory, departmentFactory) {
+	function subjectController($scope, dataContext) {
 
-		//$scope.departments = departmentFactory.get();
-		//$scope.selectDepartmentInfo = departmentFactory.selectInfo;
-		//$scope.selectFacultyInfo = facultyFactory.selectInfo;
-		////
-		//$scope.$watch('selectDepartmentInfo.department', function (newValue, oldValue) {
-		//	//alert('newValue:  ' + newValue.Title + '\noldValue:  ' + oldValue.Title);
-		//});
+		dataContext.getFaculties(function (faculties) {
+			$scope.faculties = faculties;
+		});
 
-		//departmentApiService.getAll().success(function (response) {
-		//	departmentFactory.update(response);
-		//	$scope.departments = departmentFactory.get();
-		//});
+		$scope.departments = dataContext.getDepartments();
 
-		//$scope.select = function (department) {
-		//	departmentFactory.selectInfo.department = department;
-		//}
+		$scope.$watch('departments.select', function (newValue) {
+			if (newValue) {
+				dataContext.getByDepartmentId(newValue.Id).success(function (data) {
+					$scope.subjects = data;
+				});
+			}
+		});
 	}
 })();

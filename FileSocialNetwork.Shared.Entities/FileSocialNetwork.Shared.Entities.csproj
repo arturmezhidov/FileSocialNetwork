@@ -44,12 +44,15 @@
     <Compile Include="Faculty.cs" />
     <Compile Include="File.cs" />
     <Compile Include="FileCategory.cs" />
+    <Compile Include="FileInfo.cs" />
+    <Compile Include="FilesOfCategory.cs" />
     <Compile Include="Group.cs" />
     <Compile Include="Like.cs" />
     <Compile Include="Message.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Speciality.cs" />
     <Compile Include="Subject.cs" />
+    <Compile Include="SubjectFiles.cs" />
     <Compile Include="TotalRating.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserMessage.cs" />

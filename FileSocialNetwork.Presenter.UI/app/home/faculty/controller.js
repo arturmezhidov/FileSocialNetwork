@@ -6,9 +6,9 @@
 		.module('faculty')
 		.controller('facultyController', facultyController);
 
-	facultyController.$inject = ['$scope', 'dataContext'];
+	facultyController.$inject = ['$scope', '$rootScope', 'dataContext'];
 
-	function facultyController($scope, dataContext) {
+	function facultyController($scope, $rootScope, dataContext) {
 
 		dataContext.getFaculties(function (faculties) {
 			$scope.faculties = faculties.items;
@@ -16,6 +16,7 @@
 
 		$scope.select = function (faculty) {
 			dataContext.setSelectFaculty(faculty.Id);
+			$rootScope.toDepartment();
 		}
 	}
 })();

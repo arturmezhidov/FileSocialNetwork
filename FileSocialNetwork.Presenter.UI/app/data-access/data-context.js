@@ -20,11 +20,19 @@
 			select: {},
 			updated: false
 		};
+		var departments = {
+			select: {}
+		}
 		var factory = {
 			getRating: getRating,
 			getFaculties: getFaculties,
+			getDepartments: getDepartments,
 			setSelectFaculty: setSelectFaculty,
-			getGroupsBySpecialityId: getGroupsBySpecialityId
+			setSelectDepartment: setSelectDepartment,
+			getGroupsBySpecialityId: getGroupsBySpecialityId,
+			getByDepartmentId: getByDepartmentId,
+			getAllFileCategoryes: getAllFileCategoryes,
+			upload: upload
 		}
 
 		function getRating(success) {
@@ -57,10 +65,27 @@
 				}
 			}
 		}
+		function getDepartments() {
+			return departments;
+		}
+		function setSelectDepartment(dep) {
+			departments.select = dep;
+		}
 		function getGroupsBySpecialityId(specialityId, success) {
 			return apiService
 					.getGroupsBySpecialityId(specialityId)
 					.success(success);
+		}
+		function getByDepartmentId(id) {
+			return apiService.getByDepartmentId(id);
+		}
+		function getAllFileCategoryes(success) {
+			return apiService
+				.getAllFileCategoryes()
+				.success(success);
+		}
+		function upload(data) {
+			return apiService.upload(data);
 		}
 
 		return factory;

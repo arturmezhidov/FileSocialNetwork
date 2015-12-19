@@ -17,11 +17,13 @@ using FileSocialNetwork.Presenter.WebService.Models;
 using FileSocialNetwork.Presenter.WebService.Providers;
 using FileSocialNetwork.Presenter.WebService.Results;
 using FileSocialNetwork.Shared.Entities;
+using System.Web.Http.Cors;
 
 namespace FileSocialNetwork.Presenter.WebService.Controllers
 {
 	[Authorize]
 	[RoutePrefix("api/Account")]
+    [EnableCors("*", "*", "*")]
 	public class AccountController : ApiController
 	{
 		private const string LocalLoginProvider = "Local";

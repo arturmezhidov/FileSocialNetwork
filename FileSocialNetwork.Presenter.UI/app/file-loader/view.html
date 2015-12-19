@@ -1,0 +1,85 @@
+﻿<div class="c-file-load">
+	<div class="container">
+		<div>
+			<h2>
+				<span class="glyphicon glyphicon-open-file"></span> Загрузка файла
+			</h2>
+		</div>
+
+			<ul>
+				<li ng-repeat="f in files" style="font:smaller">{{f.name}} {{f.$error}} {{f.$errorParam}}</li>
+			</ul>
+
+		<div>
+			<form class="form-horizontal" role="form">
+				<div class="form-group">
+					<label class="col-sm-3 control-label">Факультет</label>
+					<div class="col-sm-7">
+						<select ng-model="selectFaculty" ng-options="faculty.Title for faculty in faculties" class="select-list"></select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label  class="col-sm-3 control-label">Кафедра</label>
+					<div class="col-sm-7">
+						<select ng-model="selectDepartment" ng-options="dep.Title for dep in selectFaculty.Departments" class="select-list"></select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">Предмет</label>
+					<div class="col-sm-7">
+						<select ng-model="selectSubject" ng-options="sub.SubjectTitle for sub in subjects" class="select-list"></select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">Категория</label>
+					<div class="col-sm-7">
+						<select ng-model="selectCategory" ng-options="category.Name for category in categories" class="select-list"></select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">Файл</label>
+					<div class="col-sm-7">
+						<div class="input-group">
+							<input type="text" ng-model="file.name" class="text-box" readonly />
+							<span class="input-group-btn">
+                                <button class="btn btn-default btn-input-file" type="button" ngf-select ng-model="file" ngf-multiple="false">Обзор</button>
+							</span>
+						</div>
+					</div>
+				</div>
+                <!--image />*,application/pdf-->
+                <!--<div class="row">
+                    <div class="col-sm-offset-3 col-sm-7">
+                        <div ngf-drop ngf-select ng-model="files" class="drop-box"
+                             ngf-drag-over-class="'dragover'" ngf-multiple="true" ngf-allow-dir="true"
+                             accept="*" 
+                             ngf-pattern="'image/*,application/pdf'">
+                            Перетащите файл или кликните мышкой для выбора
+                        </div>
+                    </div>
+                </div>-->
+			</form>
+		</div>
+        <div ng-show="progressing" ng-animate="{hide}" class="row">
+            <div class="col-sm-offset-3 col-sm-7">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="50" aria-valuemax="100" style="width: {{progress}}">
+                        {{progress}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" ng-show="$scope.error">
+            <div class="col-sm-offset-4 col-sm-4">
+                <p class="error">{{error}}</p>
+            </div>
+        </div>
+		<br />
+		<div class="row">
+			<div class="col-sm-offset-3 col-sm-4">
+                <button ng-click="upload()" ng-disabled="!isValid" type="button" class="btn btn-primary"> Загрузить </button>
+			</div>
+		</div>
+		<br />
+	</div>
+</div>
