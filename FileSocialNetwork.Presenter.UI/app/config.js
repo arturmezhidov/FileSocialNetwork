@@ -17,7 +17,7 @@
 		    CTRL_CONFIRM: 'AccountState/ConfirmLogin',
 		    CTRL_ACCOUNT_LOGOUT: 'Account/Logout',
 		    CTRL_UPLOAD: 'File',
-		    CTRL_LIKE: 'Like',
+		    CTRL_LIKE: 'Like/',
             AUTH_TOKEN: 'auth_token'
 		});
 })();

@@ -75,5 +75,13 @@ namespace FileSocialNetwork.BusinessLogic.BusinessComponents
 
             return userLike;
         }
-	}
+
+        public bool IsLiked(int userId, int fileId)
+        {
+            File file = context.Files.GetById(fileId);
+            Like like = file.Likes.FirstOrDefault(item => item.UserId == userId);
+
+            return like != null;
+        }
+    }
 }

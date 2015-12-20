@@ -200,6 +200,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AccountStateController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\FacultyController.cs" />
     <Compile Include="Controllers\FileCategoryController.cs" />
@@ -217,6 +218,8 @@
     <Compile Include="Models\DepartmentViewModel.cs" />
     <Compile Include="Models\FacultyViewModel.cs" />
     <Compile Include="Models\FileCategoryViewModel.cs" />
+    <Compile Include="Models\LikeInfoViewModel.cs" />
+    <Compile Include="Models\LikeViewModel.cs" />
     <Compile Include="Models\UploadDataModel.cs" />
     <Compile Include="Models\GroupViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />

@@ -47,14 +47,25 @@
             return $http.get(config.BASE_URL + config.CTRL_GROUP + specialityId);
         }
         function getByDepartmentId(departmentId) {
-            return $http.get(config.BASE_URL + config.CTRL_SUBJECT + departmentId);
+         //   return $http.get(config.BASE_URL + config.CTRL_SUBJECT + departmentId);
+            return $http({
+                method: 'GET',
+                url: config.BASE_URL + config.CTRL_SUBJECT + departmentId,
+                xsrfHeaderName: 'Authorization',
+                headers: {
+                    'Authorization': "Bearer " + token()
+                }
+            });
         }
         function getAllFileCategoryes() {
             return $http.get(config.BASE_URL + config.CTRL_FILE_CATEGORY);
         }
         function register(data) {
             return $http({
-                method: 'POST', url: config.BASE_URL + config.CTRL_ACCOUNT_REGISTER, data: $.param(data), headers: {
+                method: 'POST',
+                url: config.BASE_URL + config.CTRL_ACCOUNT_REGISTER,
+                data: $.param(data),
+                headers: {
                     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
                 }
             });
@@ -100,13 +111,15 @@
                 }
             }
         }
-        function like(userId, fileId) {
+        function like(data) {
             return $http({
                 method: 'POST',
                 url: config.BASE_URL + config.CTRL_LIKE,
+                data: $.param(data),
                 xsrfHeaderName: 'Authorization',
                 headers: {
-                    'Authorization': "Bearer " + token
+                    'Authorization': "Bearer " + token(),
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
                 }
             });
         }

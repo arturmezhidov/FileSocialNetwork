@@ -79,6 +79,7 @@
 		    } else {
 		        status.redirectUrl = '/';
 		    }
+		    return status.isAuthorize;
 		}
 		function redirect() {
 		    $location.path(status.redirectUrl);

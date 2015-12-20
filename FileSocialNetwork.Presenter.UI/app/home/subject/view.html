@@ -36,8 +36,8 @@
                                 <td><span class="glyphicon glyphicon-user"></span> {{file.UserName}}</td>
                                 <td><span class="glyphicon glyphicon-calendar"></span> {{file.DateOfCreate}}</td>
                                 <td><span class="glyphicon glyphicon-save-file"></span> <a href="{{file.Url}}">Скачать</a></td>
-                                <td><span class="glyphicon glyphicon-thumbs-up"></span> {{file.Likes}}</td>
-                                <td><span ng-show="accountState.isAdmin" class="glyphicon glyphicon-remove" title="Удалить"></span></td>
+                                <td><span class="glyphicon glyphicon-thumbs-up" ng-click="like(file)" ng-class="file.Liked && accountState.isAuthorize ? 'liked': ''"></span> {{file.Likes}}</td>
+                                <td><span class="glyphicon glyphicon-remove" ng-show="accountState.isAdmin" title="Удалить"></span></td>
                             </tr>
                         </tbody>
                     </table>

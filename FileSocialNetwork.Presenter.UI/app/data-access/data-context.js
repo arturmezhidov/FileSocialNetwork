@@ -32,7 +32,8 @@
             getGroupsBySpecialityId: getGroupsBySpecialityId,
             getByDepartmentId: getByDepartmentId,
             getAllFileCategoryes: getAllFileCategoryes,
-            upload: upload
+            upload: upload,
+            like: like
         }
 
         function getRating(success) {
@@ -88,6 +89,9 @@
         }
         function upload(data) {
             return apiService.upload(data);
+        }
+        function like(fileId) {
+            return apiService.like({ fileId: fileId });
         }
 
         return factory;

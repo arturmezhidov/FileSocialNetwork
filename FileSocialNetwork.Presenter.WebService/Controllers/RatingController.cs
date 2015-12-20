@@ -10,8 +10,6 @@ using System.Web.Http.Cors;
 
 namespace FileSocialNetwork.Presenter.WebService.Controllers
 {
-    [EnableCors("*", "*", "*")]
-    [Authorize(Roles="admin")]
 	public class RatingController : ApiController
 	{
 		private IRatingService service;

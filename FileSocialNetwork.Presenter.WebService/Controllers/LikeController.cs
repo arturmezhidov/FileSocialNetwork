@@ -14,30 +14,8 @@ using System.Threading.Tasks;
 namespace FileSocialNetwork.Presenter.WebService.Controllers
 {
     [Authorize]
-    public class LikeController : ApiController
+    public class LikeController : BaseController
     {
-        private ApplicationUserManager _userManager;
-
-        protected string UserId
-        {
-            get
-            {
-                return User.Identity.GetUserId();
-            }
-        }
-
-        public ApplicationUserManager UserManager
-        {
-            get
-            {
-                return _userManager ?? Request.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            }
-            private set
-            {
-                _userManager = value;
-            }
-        }
-
         private readonly IFileService service;
 
         public LikeController(IFileService service)
@@ -46,11 +24,10 @@ namespace FileSocialNetwork.Presenter.WebService.Controllers
         }
 
         // POST api/like
-        public async Task<LikeInfoViewModel> Post(int fileId)
+        [HttpPost]
+        public LikeInfoViewModel Post([FromBody]LikeViewModel model)
         {
-            var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
-
-            UserLike like = service.Liking(user.ProfileUserId, fileId);
+            UserLike like = service.Liking(ApplicationUser.ProfileUserId, model.FileId);
 
             LikeInfoViewModel likeViewModel = new LikeInfoViewModel(like, true);
 

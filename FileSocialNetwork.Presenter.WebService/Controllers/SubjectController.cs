@@ -11,13 +11,15 @@ using System.Web.Http.Cors;
 namespace FileSocialNetwork.Presenter.WebService.Controllers
 {
     [EnableCors("*", "*", "*")]
-	public class SubjectController : ApiController
+    public class SubjectController : BaseController
 	{
 		private ISubjectService service;
+        private IFileService fileService;
 
-		public SubjectController(ISubjectService service)
+		public SubjectController(ISubjectService service, IFileService fileService)
 		{
 			this.service = service;
+            this.fileService = fileService;
 		}
 
 		[HttpGet]
@@ -32,6 +34,10 @@ namespace FileSocialNetwork.Presenter.WebService.Controllers
 					foreach (FileInfo fileInfo in category.Files)
 					{
 						fileInfo.Url = String.Format("http://{0}/Files/{1}", Request.RequestUri.Authority, fileInfo.Name);
+                        if (User.Identity.IsAuthenticated)
+                        {
+                            fileInfo.Liked = fileService.IsLiked(ApplicationUser.ProfileUserId, fileInfo.Id);
+                        }
 					}
 				}
 			}
