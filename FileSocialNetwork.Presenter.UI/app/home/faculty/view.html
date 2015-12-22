@@ -1,7 +1,7 @@
 ﻿<div ng-controller="facultyController" class="container">
 
     <h1 class="h-faculty">
-        <span><span class="glyphicon glyphicon-education"></span> Факультеты <span ng-show="accountState.isAdmin" class="glyphicon glyphicon-pencil edit" title="Редактировать"></span></span>
+        <span><span class="glyphicon glyphicon-education"></span> Факультеты <a href="#/faculty-edit" ng-show="accountState.isAdmin" title="Редактировать"><span class="glyphicon glyphicon-pencil edit"></span></a></span>
     </h1>
 
 	<div class="c-facultiy-list">

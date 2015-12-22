@@ -77,6 +77,8 @@
     <Content Include="app\home\department\controller.js" />
     <Content Include="app\home\department\view.html" />
     <Content Include="app\home\faculty\controller.js" />
+    <Content Include="app\home\faculty\edit-controller.js" />
+    <Content Include="app\home\faculty\edit.html" />
     <Content Include="app\home\faculty\view.html" />
     <Content Include="app\home\subject\controller.js" />
     <Content Include="app\home\subject\view.html" />

@@ -21,9 +21,14 @@
                             	controllerAs: 'ctrl'
                             })
 				            .when('/upload', {
-				            	templateUrl: '/app/file-loader/view.html',
-				            	controller: 'fileLoadController',
-				            	controllerAs: 'ctrl'
+				                templateUrl: '/app/file-loader/view.html',
+				                controller: 'fileLoadController',
+				                controllerAs: 'ctrl'
+				            })
+				            .when('/faculty-edit', {
+				                templateUrl: '/app/home/faculty/edit.html',
+				                controller: 'facultyEditController',
+				                controllerAs: 'ctrl'
 				            })
                             .otherwise({
                             	redirectTo: '/'
