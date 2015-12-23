@@ -25,6 +25,7 @@
         this.upload = upload;
         this.like = like;
         this.token = token;
+        this.saveFaculty = saveFaculty;
 
         function getTotalRating() {
             //return $http.get(config.BASE_URL + config.CTRL_RATING);
@@ -128,6 +129,9 @@
                 localStorage.setItem(config.AUTH_TOKEN, value);
             }
             return localStorage.getItem(config.AUTH_TOKEN);
+        }
+        function saveFaculty(faculties) {
+            alert(faculties);   
         }
     }
 })();

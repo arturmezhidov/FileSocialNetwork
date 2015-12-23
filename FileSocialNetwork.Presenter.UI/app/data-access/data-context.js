@@ -33,7 +33,8 @@
             getByDepartmentId: getByDepartmentId,
             getAllFileCategoryes: getAllFileCategoryes,
             upload: upload,
-            like: like
+            like: like,
+            saveFaculty: saveFaculty
         }
 
         function getRating(success) {
@@ -92,6 +93,9 @@
         }
         function like(fileId) {
             return apiService.like({ fileId: fileId });
+        }
+        function saveFaculty(faculties) {
+            return apiService.saveFaculty(faculties);
         }
 
         return factory;

@@ -10,7 +10,9 @@
                 <div ng-repeat="faculty in faculties" class="form-group">
                     <div class="col-sm-offset-3 col-sm-6">
                         <input ng-model="faculty.Title" class="form-control text-box">
-                        <span ng-click="remove(file)" class="glyphicon glyphicon-remove" title="Удалить"></span>
+                    </div>
+                    <div class="col-sm-1">
+                        <span ng-click="remove(faculty)" class="glyphicon glyphicon-remove" title="Удалить"></span>
                     </div>
                 </div>
             </form>
